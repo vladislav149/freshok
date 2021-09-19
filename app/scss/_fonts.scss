@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Ruda-Bold', sans-serif;
+  src: local('Ruda-Bold'),
+    url('../fonts/ruda/Ruda-Bold.woff2') format('woff2'),
+    url('../fonts/ruda/Ruda-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  src: local('Ruda-SemiBold'),
+    url('../fonts/ruda/Ruda-SemiBold.woff2') format('woff2'),
+    url('../fonts/ruda/Ruda-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Regular', sans-serif;
+  src: local('Ruda-Regular'),
+    url('../fonts/ruda/Ruda-Regular.woff2') format('woff2'),
+    url('../fonts/ruda/Ruda-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold',
+    sans-serif;
+  src: local('OpenSans-Bold'),
+    url('../fonts/open_sans/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/open_sans/OpenSans-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  src: local('OpenSans-SemiBold'),
+    url('../fonts/open_sans/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/open_sans/OpenSans-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular', sans-serif;
+  src: local('OpenSans-Regular'),
+    url('../fonts/open_sans/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/open_sans/OpenSans-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light', sans-serif;
+  src: local('OpenSans-Light'),
+    url('../fonts/open_sans/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/open_sans/OpenSans-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}

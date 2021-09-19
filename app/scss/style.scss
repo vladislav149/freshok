@@ -2,4 +2,78 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+
+.header {
+  color: #ffffff;
+
+  &__top {
+    @extend %open-700;
+    background-color: #31352b;
+    padding: 14px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    background-color: #63a60f;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.address {
+  padding-left: 45px;
+
+  &__adds {
+    margin-right: 80px;
+    position: relative;
+  }
+
+  &__phone {
+    position: relative;
+  }
+
+  &__adds::before,
+  &__phone::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -5px;
+  }
+
+  &__adds::before {
+    background-image: url(../images/icon/address.svg);
+    left: -44px;
+  }
+
+  &__phone::before {
+    background-image: url(../images/icon/tel.svg);
+    left: -40px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+
+
 @import 'media';

@@ -9,3 +9,21 @@
   white-space: nowrap;
   border: 0;
 }
+
+body {
+  color: $default;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  @extend %open-600
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
