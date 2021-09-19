@@ -1,4 +1,6 @@
 $default: #121212;
+$bgdefault: #31352b;
+$default-element: #63a60f;
 
 %ruda-700 {
   font-family: 'Ruda-Bold',
@@ -40,4 +42,12 @@ $default: #121212;
   font-family: 'OpenSans-Light',
     sans-serif;
   font-weight: 300;
+}
+
+%pseudo {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

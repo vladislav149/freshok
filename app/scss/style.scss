@@ -4,11 +4,10 @@
 @import 'global';
 
 .header {
-  color: #ffffff;
-
   &__top {
     @extend %open-700;
-    background-color: #31352b;
+    color: #ffffff;
+    background-color: $bgdefault;
     padding: 14px 0;
     font-size: 13px;
     text-transform: uppercase;
@@ -20,12 +19,37 @@
   }
 
   &__bottom {
-    background-color: #63a60f;
+    background-color: $default-element;
   }
 
   &__bottom-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 109px;
+  }
+
+  &__catalog {
+    padding: 15px 38px 15px 61px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__catalog::before {
+    @extend %pseudo;
+    background-image: url(../images/icon/catalog.svg);
+    width: 25px;
+    height: 17px;
+    left: 18px;
+  }
+
+  &__catalog::after {
+    @extend %pseudo;
+    background-image: url(../images/icon/chevron.svg);
+    width: 8px;
+    height: 4px;
+    right: 18px;
   }
 }
 

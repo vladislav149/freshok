@@ -14,7 +14,7 @@ body {
   color: $default;
   font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   @extend %open-600
 }
 
@@ -26,4 +26,11 @@ address {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: $default-element;
+  border-radius: 6px;
+  border: none;
 }
