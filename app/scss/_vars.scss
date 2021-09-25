@@ -1,6 +1,19 @@
 $default: #121212;
 $bgdefault: #31352b;
+$bgcolor: #ffffff;
+$bgcolorben: #f6f6f6;
+$colorben: #505050;
 $default-element: #63a60f;
+$colorspan: #cf3e3b;
+$bgshadow: rgba(255, 255, 255, 0.8);
+$color-price: #c1c1c1;
+$hit: #ff7a00;
+
+%ruda-900 {
+  font-family: 'Ruda-Black',
+    sans-serif;
+  font-weight: 900;
+}
 
 %ruda-700 {
   font-family: 'Ruda-Bold',
@@ -44,10 +57,31 @@ $default-element: #63a60f;
   font-weight: 300;
 }
 
+%signika-700 {
+  font-family: 'Signika-Bold',
+    sans-serif;
+  font-weight: 700;
+}
+
 %pseudo {
   content: "";
   position: absolute;
+}
+
+%bgcontain {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+%bgcover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%button-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }

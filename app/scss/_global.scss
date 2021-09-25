@@ -28,9 +28,18 @@ address {
   padding: 0 15px;
 }
 
-.btn {
+.btn-more {
   background-color: #ffffff;
   color: $default-element;
   border-radius: 6px;
   border: none;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: $default-element;
+  color: $bgcolor;
+  border-radius: 6px;
+  @extend %open-400;
+  font-size: 18px;
 }

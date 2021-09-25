@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ФрешОк </title>
+  <title>ФрешОк продуктовый магазин</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -49,29 +49,30 @@
             <img class="logo__img" src="images/logo.svg" alt="логотип">
           </a>
 
-          <button class="btn header__catalog">
+          <button class="btn-more header__catalog" type="submit">
             Каталог продуктов
           </button>
 
           <form class="header__form" action="">
-            <input class="header__search" name="search" placeholder="Найти в магазине ..." type="text">
+            <label class="header__label">
+              <input class="header__search" name="search" placeholder="Найти в магазине ..." type="text">
+            </label>
             <button class="header__search-btn">поиск</button>
           </form>
 
           <nav class="user-nav">
             <ul class="user-nav__list">
               <li class="user-nav__item">
-                <a class="user-nav__link" href="">
-
+                <a class="user-nav__link user-nav__link--user" href="#">
                 </a>
               </li>
               <li class="user-nav__item">
-                <a class="user-nav__link" href="">
+                <a class="user-nav__link user-nav__link--heart" href="#">
                   <span class="user-nav__number">12</span>
                 </a>
               </li>
               <li class="user-nav__item">
-                <a class="user-nav__link" href="">
+                <a class="user-nav__link user-nav__link--cart" href="#">
                   <span class="user-nav__number">12</span>
                 </a>
               </li>
@@ -81,6 +82,274 @@
       </div>
     </div>
   </header>
+
+  <main class="main">
+    <section class="offers">
+      <div class="offers__wrapper" style="background-image: url(images/offers/vegetables.jpg);">
+        <div class="container offers__container">
+          <div class="offers__inner" style="background-color: rgba(255, 255, 255, 0.8);">
+            <h2 class="offers__title">
+              свежачок вам в хату
+              <span class="offers__subtitle">скидка -50%</span>
+            </h2>
+            <p>
+              Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+            </p>
+            <a class="btn" href="#">Купить сейчас</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="offers__wrapper" style="background-image: url(images/offers/tomatoes.jpg);">
+        <div class="container offers__container">
+          <div class="offers__inner" style="background-color: rgba(255, 255, 255, 0.8);">
+            <h2 class="offers__title">
+              накрути себе томатов
+              <span class="offers__subtitle">акция: 3 кг по цене 1</span>
+            </h2>
+            <p>
+              Только с 12 по 15 июля скидка на домашние помидорчики
+            </p>
+            <a class="btn" href="#">Купить сейчас</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="offers__wrapper" style="background-image: url(images/offers/greens.jpg);">
+        <div class="container offers__container">
+          <div class="offers__inner" style="background-color: rgba(255, 255, 255, 0.8);">
+            <h2 class="offers__title">
+              пусть остальные позеленеют от зависти
+              <span class="offers__subtitle">распродажа зелени</span>
+            </h2>
+            <a class="btn" href="#">Купить сейчас</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+
+        <ul class="benefits__list">
+          <li class="benefits__item benefits__item--scooter">
+            <h3 class="benefits__title">Бесплатная доставка</h3>
+            <p>Для заказов на сумму от 500 ₽</p>
+          </li>
+
+          <li class="benefits__item benefits__item--return">
+            <h3 class="benefits__title">Возврат товара</h3>
+            <p>Если товары были испорчены</p>
+          </li>
+
+          <li class="benefits__item benefits__item--day">
+            <h3 class="benefits__title">Поддержка 24/7</h3>
+            <p>Лучшие операторы</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="best">
+      <div class="container">
+        <div class="best__inner">
+
+          <h2 class="title best__title">
+            топовые товары
+          </h2>
+
+          <ul class="best__list">
+            <li class="best__item">
+              <button class="best__btn">
+                все товары
+              </button>
+            </li>
+
+            <li class="best__item">
+              <button class="best__btn">
+                фрукты
+              </button>
+            </li>
+
+            <li class="best__item">
+              <button class="best__btn">
+                овощи
+              </button>
+            </li>
+
+            <li class="best__item">
+              <button class="best__btn">
+                Напитки
+              </button>
+            </li>
+
+            <li class="best__item">
+              <button class="best__btn">
+                бакалея
+              </button>
+            </li>
+          </ul>
+
+          <ul class="product">
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc">новинка</span>
+                  <span class="product__desc product__desc--discount">-50%</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/pineapple.jpg" alt="ананас">
+              <div class="product__bottom">
+                <h3 class="product__name">Ананас, 1кг</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price product__price--old">1999 ₽</span>
+                    <span class="product__price">999 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/lemon.jpg" alt="лимон">
+              <div class="product__bottom">
+                <h3 class="product__name">Лимон, 1кг</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">199 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc product__desc--hit">хит</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+              <div class="product__bottom">
+                <h3 class="product__name">Питахайя красная с белой мякотью, 1шт</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">1019 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc">новинка</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/paprik.jpg" alt="перец">
+              <div class="product__bottom">
+                <h3 class="product__name">Перец оранжевый, 1кг</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">349 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc product__desc--hit">хит</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/carrot.jpg" alt="морковь">
+              <div class="product__bottom">
+                <h3 class="product__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">49 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc product__desc--discount">-30%</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/juice.jpg" alt="напиток сокосодержащий красный апельсин">
+              <div class="product__bottom">
+                <h3 class="product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+                  безалкогольн...</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price product__price--old">299 ₽</span>
+                    <span class="product__price">199 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                  <span class="product__desc">новинка</span>
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/coffee.jpg" alt="кофе">
+              <div class="product__bottom">
+                <h3 class="product__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">877 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+
+            <li class="product__list">
+              <div class="product__top">
+                <div class="product__top-box">
+                </div>
+                <button class="product__like"></button>
+              </div>
+              <img class="product__img" src="images/product/ketchup.jpg" alt="кетчуп">
+              <div class="product__bottom">
+                <h3 class="product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
+                <div class="product__bottom-box">
+                  <div class="product__price">
+                    <span class="product__price">600 ₽</span>
+                  </div>
+                  <button class="product__btn"></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="js/main.min.js"></script>
 </body>
