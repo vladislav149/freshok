@@ -15,7 +15,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.03em;
-  @extend %open-600
+  @extend %open-600;
 }
 
 address {
@@ -36,10 +36,12 @@ address {
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 11px 24px;
   background-color: $default-element;
   color: $bgcolor;
   border-radius: 6px;
   @extend %open-400;
   font-size: 18px;
+  border: 1px solid $default-element;
+  line-height: 1.3;
 }
