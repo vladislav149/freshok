@@ -11,6 +11,7 @@
 }
 
 body {
+  background-color: #ffffff;
   color: $default;
   font-size: 14px;
   line-height: 1.4;
@@ -29,7 +30,7 @@ address {
 }
 
 .btn-more {
-  background-color: #ffffff;
+  background-color: $bgcolor;
   color: $default-element;
   border-radius: 6px;
   border: none;
@@ -42,6 +43,6 @@ address {
   border-radius: 6px;
   @extend %open-400;
   font-size: 18px;
-  border: 1px solid $default-element;
   line-height: 1.3;
+  border: none;
 }
