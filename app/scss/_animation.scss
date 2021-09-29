@@ -60,6 +60,7 @@
 .header__search-btn {
   &:focus {
     box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+    outline: transparent;
   }
 
   &:hover {
@@ -109,14 +110,35 @@
 }
 
 .slick-arrows {
+  transition: background-color 0.3s,
+    box-shadow 0.3s;
 
   &:focus {
-    background: $animation-btn-focus;
     outline: transparent;
+    background-color: $animation-btn-focus;
+    box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
   }
 
   &:hover,
   &:active {
-    box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+    background-color: $animation-btn-focus;
+  }
+}
+
+.best {
+
+  &__btn::after {
+    @extend %pseudo;
+    height: 3px;
+    width: 100%;
+    opacity: 0.2;
+    left: 0;
+    bottom: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+
+  &__btn:hover::after {
+    background-color: $default-element;
   }
 }

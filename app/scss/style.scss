@@ -2,7 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'libs';
-@import 'slider';
+@import 'slider_mixitup';
 @import 'animation';
 @import 'global';
 
@@ -331,6 +331,7 @@
     color: $colorben;
     text-transform: uppercase;
     @extend %open-700;
+    position: relative;
   }
 
   &__btn-yet {
