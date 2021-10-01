@@ -84,17 +84,16 @@
   margin-right: 30px;
 
   &__list {
-    display: none;
+    z-index: -1;
     position: absolute;
     left: 0;
-    z-index: 9;
     background-color: $bgcolor;
     width: 100%;
     border-radius: 0px 0px 6px 6px;
   }
 
   &__list--active {
-    display: block;
+    z-index: 9;
   }
 
   &__btn {

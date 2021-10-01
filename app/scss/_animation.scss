@@ -127,6 +127,20 @@
 }
 
 .catalog {
+
+  &__items {
+    height: 0;
+    transition: height 0.3s;
+    color: transparent;
+    z-index: -1;
+  }
+
+  &__items--active {
+    z-index: 9;
+    height: 588px;
+    color: $bgproduct;
+  }
+
   &__btn {
     transition: background-color 0.3s;
   }
@@ -199,7 +213,7 @@
 }
 
 .input:focus {
-box-shadow: 0px 0px 0px 3px $animation-btn-focus;
-border: 1px solid $default-element;
-outline: transparent;
+  box-shadow: 0px 0px 0px 3px $animation-btn-focus;
+  border: 1px solid $default-element;
+  outline: transparent;
 }
