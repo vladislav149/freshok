@@ -34,6 +34,41 @@
   &__like:hover .product__like-img {
     fill: #ffb800;
   }
+
+  &__link::before,
+  &__link::after {
+    @extend %pseudo;
+    transition: opacity 0.3s;
+  }
+
+  &__link::before {
+    background-color: $bgproduct;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__link:hover::before {
+    opacity: 0.1;
+  }
+
+  &__link::after {
+    @extend %bgcover;
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/icon/search-green.svg);
+    opacity: 0;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link:hover::after {
+    opacity: 1;
+  }
 }
 
 .animation-btn {
@@ -91,22 +126,42 @@
   }
 }
 
-.btn-more {
-  transition: background-color 0.3s;
+.catalog {
+  &__btn {
+    transition: background-color 0.3s;
+  }
 
-  &::after {
+  &__btn::after {
     transition: transform 0.3s;
   }
 
-  &:hover,
-  &:active {
+  &__btn:hover,
+  &__btn:active {
     background-color: $animation-btn-focus;
   }
 
-  &:hover::after,
-  &:active::after {
+  &__btn:hover::after,
+  &__btn:active::after {
     transform: rotate(180deg);
   }
+
+  &__item::before {
+    @extend %pseudo;
+    height: 100%;
+    width: 3px;
+    background-color: $default-element;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  &__item:hover::before {
+    opacity: 1;
+  }
+
+  &__link:hover {
+    color: $default-element;
+  }
+
 }
 
 .slick-arrows {
@@ -141,4 +196,10 @@
   &__btn:hover::after {
     background-color: $default-element;
   }
+}
+
+.input:focus {
+box-shadow: 0px 0px 0px 3px $animation-btn-focus;
+border: 1px solid $default-element;
+outline: transparent;
 }
