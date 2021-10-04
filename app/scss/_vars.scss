@@ -1,65 +1,30 @@
-$default: #121212;
-$bgdefault: #31352b;
-$bgcolor: #ffffff;
-$bgproduct: #000000;
-$bgcolorben: #f6f6f6;
-$colorben: #505050;
-$default-element: #63a60f;
-$colorspan: #cf3e3b;
-$bgshadow: rgba(255, 255, 255, 0.8);
-$color-price: #c1c1c1;
-$hit: #ff7a00;
-$color-input: #4f4f4f;
-$animation-btn-focus:#e0edcf;
 $animation-btn-hover: #4d810c;
-$animation-best-btn-hover:  #eff6e7;
+$black: #000000;
+$color-input: #4f4f4f;
+$dark-500: #505050;
+$dark-800: #31352b;
+$dark-850:#171717;
+$dark-900: #121212;
+$yellow-900: #ffb800;
+$orange-900: #ff7a00;
+$red-900: #cf3e3b;
+$silver-100: #f6f6f6;
+$silver-600: #c1c1c1;
+$green-100: #eff6e7;
+$green-200:#e0edcf;
+$green-900: #63a60f;
+$white: #ffffff;
 
-%ruda-900 {
-  font-family: 'Ruda-Black',
+
+%ruda {
+  font-family: 'Ruda',
     sans-serif;
-  font-weight: 900;
 }
 
-%ruda-700 {
-  font-family: 'Ruda-Bold',
+%open {
+  font-family: 'OpenSans',
     sans-serif;
   font-weight: 700;
-}
-
-%ruda-600 {
-  font-family: 'Ruda-SemiBold',
-    sans-serif;
-  font-weight: 600;
-}
-
-%ruda-400 {
-  font-family: 'Ruda-Regular',
-    sans-serif;
-  font-weight: 400;
-}
-
-%open-700 {
-  font-family: 'OpenSans-Bold',
-    sans-serif;
-  font-weight: 700;
-}
-
-%open-600 {
-  font-family: 'OpenSans-SemiBold',
-    sans-serif;
-  font-weight: 600;
-}
-
-%open-400 {
-  font-family: 'OpenSans-Regular',
-    sans-serif;
-  font-weight: 400;
-}
-
-%open-300 {
-  font-family: 'OpenSans-Light',
-    sans-serif;
-  font-weight: 300;
 }
 
 %pseudo {
