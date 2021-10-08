@@ -1,6 +1,6 @@
 .slick-arrows {
-  background-color: $bgshadow;
-  padding: 0;
+  background-color: rgba ($white, 0.8);
+  padding: 5px 10px 0 10px;
   border: none;
   width: 60px;
   height: 60px;
@@ -9,43 +9,33 @@
   border-radius: 6px;
   top: 50%;
   transform: translateY(-50%);
+
+  &:focus .slick-arrows__path,
+  &:hover .slick-arrows__path,
+  &:active .slick-arrows__path {
+    fill: $green-900;
+  }
+
+  &__path {
+    transition: fill 0.3s;
+  }
 }
 
 .slick-prev {
-  left: 20px;
-  /*другой вариант, что лучше?
-  right: calc(1320px + (100vw - 1320px) / 2);*/
+  left: 50px;
 }
 
 .slick-next {
-  /*другой вариант, что лучше?
-  left: calc(1320px + (100vw - 1320px) / 2);*/
-  right: 20px;
-}
-
-.slick-arrows::before {
-  @extend %pseudo;
-  @extend %bgcontain;
-  width: 19px;
-  height: 32px;
-  top: 14px;
-  left: 20px;
-}
-
-.slick-prev::before {
-  background-image: url(../images/icon/arrow-left.svg);
-}
-
-.slick-next::before {
-  background-image: url(../images/icon/arrow-right.svg);
+  right: 50px;
 }
 
 .mixitup-control-active::before {
-  @extend %pseudo;
+  content: "";
+  position: absolute;
   height: 3px;
   width: 100%;
   opacity: 0.2;
   left: 0;
   bottom: 10px;
-  background-color: $default-element;
+  background-color: $green-900;
 }
