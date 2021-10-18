@@ -26,7 +26,7 @@
 
   &__bottom {
     background-color: $green-900;
-    padding: 25px 0;
+    padding: 23px 0;
   }
 
   &__bottom-inner {
@@ -81,6 +81,7 @@
     border-radius: 0 6px 6px 0;
     padding: 15px 52px;
     text-transform: uppercase;
+    transition: box-shadow 0.3s, outline 0.3s, background-color 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
@@ -265,6 +266,12 @@
 .logo {
   margin-right: 24px;
   display: inline-block;
+
+  &__img {
+    width: 200px;
+    height: 60px;
+    object-fit: cover;
+  }
 }
 
 .user {
@@ -565,6 +572,9 @@
   }
 
   &__like-img {
+    width: 32px;
+    height: 29px;
+    fill: $silver-600;
     transition: fill 0.4s;
   }
 
@@ -791,7 +801,7 @@
       opacity: 0.1;
       height: 1px;
       width: 100%;
-      bottom: -30px;
+      bottom: -20px;
     }
   }
 
@@ -803,7 +813,7 @@
     display: flex;
     justify-content: space-between;
     letter-spacing: 0;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
   }
 
   &__form {
@@ -899,6 +909,16 @@
       margin-right: 24px;
     }
   }
+
+  &__accept-img {
+    width: 93px;
+    height: 29px;
+    object-fit: contain;
+  }
+
+  &__accept-img--mc {
+    width: 49px;
+  }
 }
 
 .social {
@@ -910,13 +930,14 @@
 
   &__link {
     @extend %animation-icon;
+    display: block;
+    padding: 7px 0;
+  }
+
+  &__link-img {
     width: 32px;
     height: 32px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    display: block;
-    padding: 22px 0;
+    object-fit: contain;
   }
 }
 
