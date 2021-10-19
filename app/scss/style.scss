@@ -14,7 +14,7 @@
     font-weight: 700;
     color: $white;
     background-color: $dark-800;
-    padding: 14px 0;
+    padding: 3px 0;
     font-size: 13px;
     text-transform: uppercase;
   }
@@ -22,11 +22,12 @@
   &__top-inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__bottom {
     background-color: $green-900;
-    padding: 23px 0;
+    padding: 22px 0;
   }
 
   &__bottom-inner {
@@ -63,9 +64,6 @@
     border: none;
     color: $dark-800;
     width: 100%;
-    /*     border: 1px transparent;
-    transition: border 0.3s,
-      box-shadow 0.3s; */
 
     &::placeholder {
       color: $dark-800;
@@ -116,44 +114,19 @@
     color: $green-900;
     border-radius: 6px;
     border: none;
-    padding: 15px 38px 15px 61px;
+    padding: 15px 19px 15px 18px;
     display: flex;
     align-items: center;
     position: relative;
     transition: background-color 0.3s, border-radius 1s;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      background-image: url(../images/icon/catalog.svg);
-      width: 25px;
-      height: 17px;
-      left: 18px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      background-image: url(../images/icon/chevron.svg);
-      width: 8px;
-      height: 4px;
-      right: 18px;
-      transition: transform 0.3s;
-    }
 
     &:hover,
     &:active {
       background-color: $green-200;
     }
 
-    &:hover::after,
-    &:active::after {
+    &:hover .catalog__img-arrow,
+    &:active .catalog__img-arrow {
       transform: rotate(180deg);
     }
 
@@ -161,10 +134,25 @@
       border-radius: 6px 6px 0 0;
       background-color: $green-200;
 
-      &::after {
+      & .catalog__img-arrow {
         transform: rotate(180deg);
       }
     }
+  }
+
+  &__img-burger {
+    object-fit: contain;
+    width: 25px;
+    height: 17px;
+    margin-right: 17px;
+  }
+
+  &__img-arrow {
+    object-fit: contain;
+    width: 8px;
+    height: 4px;
+    margin-left: 12px;
+    transition: transform 0.3s;
   }
 
   &__item {
@@ -213,40 +201,32 @@
 }
 
 .address {
+  display: flex;
 
   &__adds {
     @extend %animation;
-    padding: 14px 0 14px 45px;
-    margin-right: 40px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
 
-    &::before {
-      background-image: url(../images/icon/address.svg);
-      left: 0;
+    &:not(:last-child) {
+      margin-right: 48px;
     }
   }
 
-  &__phone {
-    @extend %animation;
-    padding: 14px 0 14px 40px;
-    position: relative;
+  &__img {
+    object-fit: contain;
+    margin-right: 12px;
 
-    &::before {
-      background-image: url(../images/icon/tel.svg);
-      left: 0;
+    &--address {
+      width: 32px;
+      height: 22px;
     }
-  }
 
-  &__adds::before,
-  &__phone::before {
-    position: absolute;
-    content: "";
-    width: 32px;
-    height: 22px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 10px;
+    &--tel {
+      width: 22px;
+      height: 22px;
+    }
   }
 }
 
@@ -275,7 +255,7 @@
 }
 
 .user {
-  max-width: 175px;
+  max-width: 170px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -289,30 +269,24 @@
     border-radius: 3px;
     border: none;
     background-color: transparent;
+  }
 
-    &--user::before {
-      background-image: url(../images/icon/user.svg);
+  &__link-img {
+    object-fit: contain;
+
+    &--user {
       width: 25px;
-    }
-
-    &--heart::before {
-      background-image: url(../images/icon/heart.svg);
-    }
-
-    &--cart::before {
-      background-image: url(../images/icon/cart.svg);
-    }
-
-    &::before {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      content: "";
-      position: absolute;
       height: 32px;
+    }
+
+    &--heart {
       width: 32px;
-      top: 10px;
-      left: 13px;
+      height: 29px;
+    }
+
+    &--cart {
+      width: 32px;
+      height: 31px;
     }
   }
 
@@ -390,9 +364,17 @@
     top: 50%;
     transform: translateY(-50%);
 
-    &:focus .slick-arrows__path,
-    &:hover .slick-arrows__path,
-    &:active .slick-arrows__path {
+    &__arrows {
+      object-fit: contain;
+      width: 18px;
+      height: 32px;
+      fill: $dark-500;
+      transition: fill 0.3s;
+    }
+
+    &:focus .slick-arrows__arrows,
+    &:hover .slick-arrows__arrows,
+    &:active .slick-arrows__arrows {
       fill: $green-900;
     }
 
@@ -420,34 +402,23 @@
   }
 
   &__item {
-    max-width: 275px;
     color: $dark-500;
-    position: relative;
-    padding-left: 74px;
-    margin-right: 55px;
+    display: flex;
 
-    &--scooter::before {
-      background-image: url(../images/benefits/scooter.svg);
+    &:not(:last-child) {
+      margin-right: 65px;
     }
+  }
 
-    &--return::before {
-      background-image: url(../images/benefits/return-box.svg);
-    }
+  &__img {
+    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 24px;
+  }
 
-    &--day::before {
-      background-image: url(../images/benefits/24-hours.svg);
-    }
-
-    &::before {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      content: "";
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      left: 0;
-    }
+  &__item-inner {
+    max-width: 190px;
   }
 
   &__title {
@@ -456,6 +427,10 @@
     font-size: 16px;
     margin-bottom: 6px;
     color: $dark-900;
+  }
+
+  &__text {
+    font-weight: 400;
   }
 }
 

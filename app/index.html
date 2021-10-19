@@ -20,10 +20,20 @@
           <div class="header__top-inner">
 
             <address class="address">
-              <a class="address__adds" href="#">адрес и время доставки</a>
-              <a class="address__phone" href="tel:+7907288365">
+              <a class="address__adds" href="#">
+                <svg class="address__img address__img--address">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--address"></use>
+                </svg>
+                адрес и время доставки
+              </a>
+
+              <a class="address__adds" href="tel:+7907288365">
+                <svg class="address__img address__img--tel">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--tel"></use>
+                </svg>
                 <span class="sr-only">телефон +7907288365</span>
-                горячая линия 24/7</a>
+                горячая линия 24/7
+              </a>
             </address>
 
             <ul class="menu">
@@ -59,7 +69,13 @@
             </a>
             <div class="catalog">
               <button class="catalog__btn" type="button">
+                <svg class="catalog__img-burger">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--catalog"></use>
+                </svg>
                 Каталог продуктов
+                <svg class="catalog__img-arrow">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--chevron"></use>
+                </svg>
               </button>
 
               <ul class="catalog__items">
@@ -134,18 +150,27 @@
             <ul class="user">
               <li class="user__item">
                 <button class="user__link user__link--user" href="#">
+                  <svg class="user__link-img user__link-img--user">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--user"></use>
+                  </svg>
                   <span class="sr-only">личный кабинет</span>
                 </button>
               </li>
               <li class="user__item">
                 <button class="user__link user__link--heart" href="#">
                   <span class="sr-only">избранные товары количество</span>
+                  <svg class="user__link-img user__link-img--heart">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--heart"></use>
+                  </svg>
                   <span class="user__number">12</span>
                 </button>
               </li>
               <li class="user__item">
                 <button class="user__link user__link--cart" href="#">
                   <span class="sr-only">товаров в корзине</span>
+                  <svg class="user__link-img user__link-img--cart">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
                   <span class="user__number">12</span>
                 </button>
               </li>
@@ -219,19 +244,37 @@
     <div class="benefits">
       <div class="container">
         <ul class="benefits__list">
-          <li class="benefits__item benefits__item--scooter">
-            <h3 class="benefits__title">Бесплатная доставка</h3>
-            <span class="benefits__text">Для заказов на сумму от 500 ₽</span>
+          <li class="benefits__item">
+            <svg class="benefits__img">
+              <use xlink:href="images/svg_sprite/sprite.svg#benefits--scooter"></use>
+            </svg>
+            <div class="benefits__item-inner">
+              <h3 class="benefits__title">Бесплатная доставка</h3>
+              <span class="benefits__text">Для заказов на сумму от 500 ₽</span>
+            </div>
+
           </li>
 
-          <li class="benefits__item benefits__item--return">
-            <h3 class="benefits__title">Возврат товара</h3>
-            <span class="benefits__text">Если товары были испорчены</span>
+          <li class="benefits__item">
+            <svg class="benefits__img">
+              <use xlink:href="images/svg_sprite/sprite.svg#benefits--return-box"></use>
+            </svg>
+            <div class="benefits__item-inner">
+              <h3 class="benefits__title">Возврат товара</h3>
+              <span class="benefits__text">Если товары были испорчены</span>
+            </div>
+
           </li>
 
-          <li class="benefits__item benefits__item--day">
-            <h3 class="benefits__title">Поддержка 24/7</h3>
-            <span class="benefits__text">Лучшие операторы</span>
+          <li class="benefits__item">
+            <svg class="benefits__img">
+              <use xlink:href="images/svg_sprite/sprite.svg#benefits--24-hours"></use>
+            </svg>
+            <div class="benefits__item-inner">
+              <h3 class="benefits__title">Поддержка 24/7</h3>
+              <span class="benefits__text">Лучшие операторы</span>
+            </div>
+
           </li>
         </ul>
       </div>
