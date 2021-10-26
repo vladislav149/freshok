@@ -39,3 +39,11 @@ body {
   letter-spacing: 0.03em;
   @extend %animation-btn;
 }
+
+.title {
+  text-transform: uppercase;
+  font-size: 32px;
+  @extend %ruda;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
