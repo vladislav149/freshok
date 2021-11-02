@@ -47,6 +47,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/rateyo/min/jquery.rateyo.min.js',
     'app/js/main.js'
 
   ])

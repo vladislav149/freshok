@@ -579,7 +579,7 @@
       background-size: cover;
       width: 48px;
       height: 48px;
-      background-image: url(../images/icon/search-green.svg);
+      background-image: url(../images/svg/icon/search-green.svg);
       opacity: 0;
       border-radius: 50%;
       top: 50%;
@@ -944,11 +944,10 @@
 .brands {
   padding-top: 72px;
 
-  &__inner {
+  &__list {
     padding: 0 55px;
     display: flex;
     justify-content: space-between;
-
   }
 
   &__icon {
