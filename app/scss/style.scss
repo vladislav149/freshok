@@ -460,6 +460,10 @@
   justify-content: center;
   margin-bottom: 40px;
 
+  &--mini-card {
+    letter-spacing: 0.1em;
+  }
+
   &__item:not(:last-child) {
     margin-right: 24px;
   }
