@@ -64,6 +64,7 @@
     border: none;
     color: $dark-800;
     width: 100%;
+    @extend %animation-input;
 
     &::placeholder {
       color: $dark-800;
@@ -260,8 +261,11 @@
   display: flex;
   justify-content: space-between;
 
-  &__link {
+  &__item {
     @extend %animation-icon;
+  }
+
+  &__btn {
     position: relative;
     height: 50px;
     width: 50px;
@@ -271,7 +275,7 @@
     background-color: transparent;
   }
 
-  &__link-img {
+  &__btn-img {
     object-fit: contain;
 
     &--user {
@@ -300,6 +304,198 @@
     padding: 4px 3px;
     left: 3px;
     top: 4px;
+  }
+}
+
+.basket {
+  position: fixed;
+  display: none;
+  justify-content: space-between;
+  z-index: 100;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+
+  &--active {
+    display: flex;
+  }
+
+  &__inactive-part {
+    background-color: rgba($black, 0.15);
+    width: 100%;
+  }
+
+  &__active-part {
+    background-color: $white;
+    max-width: 476px;
+    width: 100%;
+  }
+
+  &__top {
+    padding: 19px 19px 11px 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+  }
+
+  &__clear {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: $black;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  &__close {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 44px;
+    height: 44px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $dark-800;
+      height: 2px;
+      border-radius: 1px;
+      width: 34px;
+      left: 5px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__list {
+    background-color: $silver-100;
+    border-top: 1px solid rgba($silver-600, 0.3);
+    padding: 12px;
+    min-height: calc(100vh - 234px);
+  }
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  &__product {
+    padding: 9px 15px 12px 12px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 30px;
+  }
+
+  &__box {
+    max-width: 170px;
+    margin-right: auto;
+  }
+
+  &__name {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__price,
+  &__sum {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 20px;
+    line-height: 1;
+    color: $dark-500;
+  }
+
+  &__quantify {
+    align-self: end;
+    margin-right: 12px;
+  }
+
+  &__sum {
+    align-self: end;
+  }
+
+  &__delete {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    right: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $dark-800;
+      height: 1px;
+      width: 17px;
+      left: 16px;
+      top: 16px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__total {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 1.2;
+    color: $black;
+  }
+
+  &__total-price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__ru {
+    font-size: 18px;
+  }
+
+  &__checkout {
+    width: 100%;
+    border-radius: 0;
+    padding: 23px 0;
   }
 }
 
@@ -427,7 +623,6 @@
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 6px;
-    color: $dark-900;
   }
 
   &__text {
@@ -444,7 +639,7 @@
   }
 
   &__title {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   &__btn {
@@ -652,69 +847,6 @@
     display: block;
   }
 
-  &__quantify {
-    display: flex;
-    align-self: center;
-  }
-
-  &--minus {
-    width: 24px;
-    height: 24px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 6px 0 0 6px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 2px;
-      background-color: $white;
-    }
-  }
-
-  &--plus {
-    width: 24px;
-    height: 24px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 0 6px 6px 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 2px;
-      background-color: $white;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 16px;
-      width: 2px;
-      background-color: $white;
-    }
-  }
-
-  &__count {
-    background-color: $green-100;
-    width: 36px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1;
-  }
-
   &__btn {
     width: 32px;
     height: 32px;
@@ -850,11 +982,19 @@
     border: 1px solid $silver-600;
     border-radius: 6px;
     padding: 12px 12px 10px 12px;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $green-900;
+    }
   }
 }
 
 .mini-card {
-  display: flex;
+
+  &__link {
+    display: flex;
+  }
 
   &__img {
     width: 100px;
@@ -985,6 +1125,16 @@
     margin-right: 7px;
     letter-spacing: 0.03em;
     padding: 15px 0;
+    transition: color 0.3s;
+
+    &:hover,
+    &:active {
+      color: $green-500;
+
+      &::after {
+        background-color: $green-500;
+      }
+    }
 
     &::after {
       content: "";
@@ -994,6 +1144,7 @@
       background-color: $green-900;
       left: 0;
       bottom: 11px;
+      transition: background-color 0.3s;
     }
   }
 
@@ -1038,7 +1189,6 @@
     height: 76px;
     text-transform: uppercase;
     border-radius: 0px 0px 4px 4px;
-    color: $dark-900;
   }
 
   &__month {
@@ -1114,6 +1264,7 @@
     line-height: 1;
     width: 100%;
     letter-spacing: 0.03em;
+    @extend %animation-input;
 
     &::placeholder {
       color: $dark-400;
@@ -1142,6 +1293,7 @@
   &__top-item {
     width: max-content;
     margin-bottom: 20px;
+    @extend %animation;
   }
 
   &__top-link {
@@ -1155,11 +1307,13 @@
   &__phone {
     margin-bottom: 20px;
     display: block;
+    @extend %animation;
   }
 
   &__location {
     margin-bottom: 12px;
     display: block;
+    @extend %animation;
   }
 
   &__bottom-inner {
@@ -1174,6 +1328,7 @@
 
   &__accept {
     padding: 8px 0;
+    @extend %animation-icon;
 
     &:not(:last-child) {
       margin-right: 24px;

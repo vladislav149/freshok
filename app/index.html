@@ -68,7 +68,7 @@
               </svg>
             </a>
             <div class="catalog">
-              <button class="catalog__btn" type="button">
+              <button class="catalog__btn" type="menu">
                 <svg class="catalog__img-burger">
                   <use xlink:href="images/svg_sprite/sprite.svg#icon--catalog"></use>
                 </svg>
@@ -149,26 +149,26 @@
 
             <ul class="user">
               <li class="user__item">
-                <button class="user__link user__link--user" href="#">
-                  <svg class="user__link-img user__link-img--user">
+                <button class="user__btn user__btn--user" href="#" type="button">
+                  <svg class="user__btn-img user__btn-img--user">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--user"></use>
                   </svg>
                   <span class="sr-only">личный кабинет</span>
                 </button>
               </li>
               <li class="user__item">
-                <button class="user__link user__link--heart" href="#">
+                <button class="user__btn user__btn--heart" href="#" type="button">
                   <span class="sr-only">избранные товары количество</span>
-                  <svg class="user__link-img user__link-img--heart">
+                  <svg class="user__btn-img user__btn-img--heart">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--heart"></use>
                   </svg>
                   <span class="user__number">12</span>
                 </button>
               </li>
               <li class="user__item">
-                <button class="user__link user__link--cart" href="#">
+                <button class="user__btn user__btn--cart" href="#" type="button">
                   <span class="sr-only">товаров в корзине</span>
-                  <svg class="user__link-img user__link-img--cart">
+                  <svg class="user__btn-img user__btn-img--cart">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                   </svg>
                   <span class="user__number">12</span>
@@ -180,6 +180,77 @@
       </div>
     </nav>
   </header>
+
+  <div class="basket">
+    <div class="basket__inactive-part">
+
+    </div>
+
+    <div class="basket__active-part">
+      <div class="basket__top">
+        <div class="basket__top-box">
+          <h2 class="basket__title">
+            Корзина
+          </h2>
+          <button class="basket__clear" type="reset">
+            очистить корзину
+          </button>
+        </div>
+        <button class="basket__close"></button>
+      </div>
+      <ul class="basket__list">
+        <li class="basket__item">
+          <article class="basket__product">
+            <img class="basket__img" src="images/product/pineapple1.jpg" alt="ананас">
+            <div class="basket__box">
+              <h3 class="basket__name">
+                Ананас, 1 кг
+              </h3>
+              <span class="basket__price">999<span class="ru">₽</span></span>
+            </div>
+            <div class="basket__quantify quantify">
+              <button class="btn quantify--minus" type="button"></button>
+              <div class="quantify__count">2</div>
+              <button class="btn quantify--plus" type="button"></button>
+            </div>
+            <span class="basket__sum">1998<span class="ru">₽</span></span>
+            <button class="basket__delete"></button>
+          </article>
+        </li>
+
+        <li class="basket__item">
+          <article class="basket__product">
+            <img class="basket__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+            <div class="basket__box">
+              <h3 class="basket__name">
+                Питахайя красная с белой мякотью, 1шт
+              </h3>
+              <span class="basket__price">1019<span class="ru">₽</span></span>
+            </div>
+            <div class="basket__quantify quantify">
+              <button class="btn quantify--minus" type="button"></button>
+              <div class="quantify__count">2</div>
+              <button class="btn quantify--plus" type="button"></button>
+            </div>
+            <span class="basket__sum">2038<span class="ru">₽</span></span>
+            <button class="basket__delete"></button>
+          </article>
+        </li>
+      </ul>
+      <div class="basket__total">
+        <span class="basket__text">
+          Товаров на сумму
+        </span>
+
+        <span class="basket__total-price">
+          2038<span class="ru basket__ru">₽</span>
+        </span>
+      </div>
+      <button class="basket__checkout btn" type="submit">
+        Оформить заказ
+      </button>
+    </div>
+  </div>
 
   <main class="main">
     <h1 class="sr-only">ФРЕШОК продуктовый магазин</h1>
@@ -348,12 +419,12 @@
                       <span class="card__price-old">1999 ₽</span>
                       <span class="card__price-new">999 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
-                    <button class="card__btn btn btn" type="button">
+                    <button class="card__btn btn" type="button">
                       <svg class="card__btn-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                       </svg>
@@ -391,10 +462,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">199 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -434,10 +505,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">1019 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -477,10 +548,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">349 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -520,10 +591,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">49 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -564,10 +635,10 @@
                       <span class="card__price-old">299 ₽</span>
                       <span class="card__price-new">199 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -607,10 +678,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">877 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -650,10 +721,10 @@
                       <span class="card__price-old"></span>
                       <span class="card__price-new">600 ₽</span>
                     </div>
-                    <div class="card__quantify">
-                      <button class="btn card--minus" type="button"></button>
-                      <div class="card__count">1</div>
-                      <button class="btn card--plus" type="button"></button>
+                    <div class="quantify">
+                      <button class="btn quantify--minus" type="button"></button>
+                      <div class="quantify__count">1</div>
+                      <button class="btn quantify--plus" type="button"></button>
                     </div>
                     <button class="card__btn btn" type="button">
                       <span class="sr-only">добавить в корзину</span>
@@ -666,7 +737,7 @@
               </article>
             </li>
           </ul>
-          <button class="btn top-product__btn" href="#">
+          <button class="btn top-product__btn" href="#" type="button">
             Показать еще
           </button>
         </div>
@@ -759,220 +830,236 @@
           <ul class="promo__list">
             <li class="promo__item mix category-1">
               <article class="mini-card">
-                <span class="profit profit--mini-card">новинка</span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit"></span>
-                <img class="mini-card__img" src="images/product/pineapple.jpg" alt="ананас">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Ананас, 1 кг
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card">новинка</span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit"></span>
+                  <img class="mini-card__img" src="images/product/pineapple.jpg" alt="ананас">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Ананас, 1 кг
+                    </h3>
 
-                  <span class="mini-card__availability">В наличии</span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability">В наличии</span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">999<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">1999 ₽</span>
-                    <span class="mini-card__score">4.5</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">999<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">1999 ₽</span>
+                      <span class="mini-card__score">4.5</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-1">
               <article class="mini-card">
-                <span class="profit profit--mini-card">новинка</span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit"></span>
-                <img class="mini-card__img" src="images/product/coffee.jpg" alt="кофе">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Кофе с коноплей органический Caffé Salomoni 250г
-                  </h3>
-                  <span class="mini-card__availability mini-card__availability--little">заканчивается</span>
-                  <span class="mini-card__availability"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card">новинка</span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit"></span>
+                  <img class="mini-card__img" src="images/product/coffee.jpg" alt="кофе">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </h3>
+                    <span class="mini-card__availability mini-card__availability--little">заканчивается</span>
+                    <span class="mini-card__availability"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">777<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">877 ₽</span>
-                    <span class="mini-card__score">4.9</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">777<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">877 ₽</span>
+                      <span class="mini-card__score">4.9</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-1">
               <article class="mini-card">
-                <span class="profit profit--mini-card">новинка</span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit"></span>
-                <img class="mini-card__img" src="images/product/strawberry.jpg" alt="клубника">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Клубника, 1 кг
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card">новинка</span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit"></span>
+                  <img class="mini-card__img" src="images/product/strawberry.jpg" alt="клубника">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Клубника, 1 кг
+                    </h3>
 
-                  <span class="mini-card__availability"></span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended">нет в наличии</span>
+                    <span class="mini-card__availability"></span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended">нет в наличии</span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">440<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">600 ₽</span>
-                    <span class="mini-card__score">5.0</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">440<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">600 ₽</span>
+                      <span class="mini-card__score">5.0</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-1">
               <article class="mini-card">
-                <span class="profit profit--mini-card">новинка</span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit"></span>
-                <img class="mini-card__img" src="images/product/mango.jpg" alt="манго">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Манго, 1 шт
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card">новинка</span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit"></span>
+                  <img class="mini-card__img" src="images/product/mango.jpg" alt="манго">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Манго, 1 шт
+                    </h3>
 
-                  <span class="mini-card__availability">В наличии</span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability">В наличии</span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">660<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">960 ₽</span>
-                    <span class="mini-card__score">5.0</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">660<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">960 ₽</span>
+                      <span class="mini-card__score">5.0</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-1">
               <article class="mini-card">
-                <span class="profit profit--mini-card">новинка</span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit"></span>
-                <img class="mini-card__img" src="images/product/salmon.jpg" alt="лосось">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Лосось, 1 кг
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card">новинка</span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit"></span>
+                  <img class="mini-card__img" src="images/product/salmon.jpg" alt="лосось">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Лосось, 1 кг
+                    </h3>
 
-                  <span class="mini-card__availability">в наличии</span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability">в наличии</span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">999<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">1199 ₽</span>
-                    <span class="mini-card__score">4.5</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">999<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">1199 ₽</span>
+                      <span class="mini-card__score">4.5</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-2">
               <article class="mini-card">
-                <span class="profit profit--mini-card"></span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit">хит</span>
-                <img class="mini-card__img" src="images/product/veg-juice.jpg" alt="сок">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Сок Granini овощной 100%, 0.5л
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card"></span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit">хит</span>
+                  <img class="mini-card__img" src="images/product/veg-juice.jpg" alt="сок">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Сок Granini овощной 100%, 0.5л
+                    </h3>
 
-                  <span class="mini-card__availability"></span>
-                  <span class="mini-card__availability mini-card__availability--little">заканчивается</span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability"></span>
+                    <span class="mini-card__availability mini-card__availability--little">заканчивается</span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">180<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">230 ₽</span>
-                    <span class="mini-card__score">4.9</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">180<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">230 ₽</span>
+                      <span class="mini-card__score">4.9</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-2">
               <article class="mini-card">
-                <span class="profit profit--mini-card"></span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit">хит</span>
-                <img class="mini-card__img" src="images/product/basket.jpg" alt="фруктовая корзина">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Фруктовая корзина, 1 шт
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card"></span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit">хит</span>
+                  <img class="mini-card__img" src="images/product/basket.jpg" alt="фруктовая корзина">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Фруктовая корзина, 1 шт
+                    </h3>
 
-                  <span class="mini-card__availability"></span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability"></span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">3990<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">5990 ₽</span>
-                    <span class="mini-card__score">4.8</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">3990<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">5990 ₽</span>
+                      <span class="mini-card__score">4.8</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
 
             <li class="promo__item mix category-2">
               <article class="mini-card">
-                <span class="profit profit--mini-card"></span>
-                <span class="profit profit--mini-card profit--discount"></span>
-                <span class="profit profit--mini-card profit--hit">хит</span>
-                <img class="mini-card__img" src="images/product/pork.jpg" alt="свинина">
-                <div class="mini-card__container">
-                  <h3 class="mini-card__title">
-                    Свинина мякоть, 1 кг
-                  </h3>
+                <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card"></span>
+                  <span class="profit profit--mini-card profit--discount"></span>
+                  <span class="profit profit--mini-card profit--hit">хит</span>
+                  <img class="mini-card__img" src="images/product/pork.jpg" alt="свинина">
+                  <div class="mini-card__container">
+                    <h3 class="mini-card__title">
+                      Свинина мякоть, 1 кг
+                    </h3>
 
-                  <span class="mini-card__availability">в наличии</span>
-                  <span class="mini-card__availability mini-card__availability--little"></span>
-                  <span class="mini-card__availability mini-card__availability--ended"></span>
+                    <span class="mini-card__availability">в наличии</span>
+                    <span class="mini-card__availability mini-card__availability--little"></span>
+                    <span class="mini-card__availability mini-card__availability--ended"></span>
 
-                  <div class="mini-card__evaluation">
-                    <span class="mini-card__price-new">499<span class="mini-card__value">₽</span></span>
-                    <span class="mini-card__price-old">599 ₽</span>
-                    <span class="mini-card__score">4.6</span>
-                    <svg class="mini-card__star">
-                      <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
-                    </svg>
+                    <div class="mini-card__evaluation">
+                      <span class="mini-card__price-new">499<span class="mini-card__value">₽</span></span>
+                      <span class="mini-card__price-old">599 ₽</span>
+                      <span class="mini-card__score">4.6</span>
+                      <svg class="mini-card__star">
+                        <use xlink:href="images/svg_sprite/sprite.svg#icon--star"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </article>
             </li>
           </ul>
-          <button class="btn" href="#">
+          <button class="btn" href="#" type="button">
             Показать еще
           </button>
         </div>

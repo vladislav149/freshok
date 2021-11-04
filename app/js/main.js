@@ -21,14 +21,28 @@ $(function(){
   });
 
   $(document).mouseup(function (e){ // событие клика по веб-документу
-		var div = $('.catalog__items');   // тут указываем ID элемента
-		if (!$('.catalog__items').is(e.target) // если клик был не по моему блоку
+		var div = $('.catalog__items');   // тут указываем класс элемента
+		if (!$('.catalog__items').is(e.target) // если клик был не по этому блоку
 		    && $('.catalog__items').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.catalog__btn').is(e.target)) { // и если не по кнопке
 			$('.catalog__items').slideUp('slow'); // медленно скрываю его
       $('.catalog__btn').removeClass('catalog__btn--active'); //удаляю класс
 		}
 	});
+
+  $('.user__btn').on('click',function(){
+    $('.basket').toggleClass('basket--active');
+  });
+
+  /* if (!$('.basket__active-part').is(e.target) // если клик был не по этому блоку
+		    && $('.basket__active-part').has(e.target).length === 0 // и не по его дочерним элементам
+        && !$('.user__btn').is(e.target)) { // и если не по кнопке
+      $('.basket').removeClass('basket--active'); //удаляю класс
+		} */
+
+  $('.basket__close').on('click',function(){
+    $('.basket').removeClass('basket--active');
+  });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
