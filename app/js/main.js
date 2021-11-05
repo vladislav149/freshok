@@ -30,12 +30,16 @@ $(function(){
 		}
 	});
 
+  $('.banner__link').on('click',function(){
+    $('.basket').addClass('basket--active');
+  });
+
   $('.user__btn--cart').on('click',function(){
-    $('.basket').toggleClass('basket--active');
+    $('.basket').addClass('basket--active');
   });
   
   $('.basket__inactive-part').on('click',function(){
-    $('.basket').toggleClass('basket--active');
+    $('.basket').removeClass('basket--active');
   });
 
   $('.basket__close').on('click',function(){
