@@ -68,7 +68,7 @@
               </svg>
             </a>
             <div class="catalog">
-              <button class="catalog__btn" type="menu">
+              <button class="catalog__btn" type="button">
                 <svg class="catalog__img-burger">
                   <use xlink:href="images/svg_sprite/sprite.svg#icon--catalog"></use>
                 </svg>
@@ -144,12 +144,15 @@
 
             <form class="header__form" action="">
               <input class="header__search" name="search" placeholder="Найти в магазине ..." type="search" required>
+              <svg class="header__search-img">
+                <use xlink:href="images/svg_sprite/sprite.svg#icon--search"></use>
+              </svg>
               <button class="header__search-btn" type="submit">поиск</button>
             </form>
 
             <ul class="user">
               <li class="user__item">
-                <button class="user__btn user__btn--user" href="#" type="button">
+                <button class="user__btn user__btn--user" type="button">
                   <svg class="user__btn-img user__btn-img--user">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--user"></use>
                   </svg>
@@ -157,7 +160,7 @@
                 </button>
               </li>
               <li class="user__item">
-                <button class="user__btn user__btn--heart" href="#" type="button">
+                <button class="user__btn user__btn--heart" type="button">
                   <span class="sr-only">избранные товары количество</span>
                   <svg class="user__btn-img user__btn-img--heart">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--heart"></use>
@@ -166,7 +169,7 @@
                 </button>
               </li>
               <li class="user__item">
-                <button class="user__btn user__btn--cart" href="#" type="button">
+                <button class="user__btn user__btn--cart" type="button">
                   <span class="sr-only">товаров в корзине</span>
                   <svg class="user__btn-img user__btn-img--cart">
                     <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
@@ -482,9 +485,9 @@
               <article class="card">
                 <div class="card__top">
                   <div class="card__top-box">
+                    <span class="profit profit--hit">хит</span>
                     <span class="profit"></span>
                     <span class="profit profit--discount"></span>
-                    <span class="profit profit--hit">хит</span>
                   </div>
                   <button class="card__like" type="button">
                     <span class="sr-only">добавить в избранное</span>
@@ -568,9 +571,9 @@
               <article class="card">
                 <div class="card__top">
                   <div class="card__top-box">
+                    <span class="profit profit--hit">хит</span>
                     <span class="profit"></span>
                     <span class="profit profit--discount"></span>
-                    <span class="profit profit--hit">хит</span>
                   </div>
                   <button class="card__like" type="button">
                     <span class="sr-only">добавить в избранное</span>
@@ -611,8 +614,8 @@
               <article class="card">
                 <div class="card__top">
                   <div class="card__top-box">
-                    <span class="profit"></span>
                     <span class="profit profit--discount">-30%</span>
+                    <span class="profit"></span>
                     <span class="profit profit--hit"></span>
                   </div>
                   <button class="card__like" type="button">
@@ -737,7 +740,7 @@
               </article>
             </li>
           </ul>
-          <button class="btn top-product__btn" href="#" type="button">
+          <button class="btn top-product__btn" type="button">
             Показать еще
           </button>
         </div>
@@ -1033,9 +1036,9 @@
             <li class="promo__item mix category-2">
               <article class="mini-card">
                 <a class="mini-card__link" href="#">
+                  <span class="profit profit--mini-card profit--hit">хит</span>
                   <span class="profit profit--mini-card"></span>
                   <span class="profit profit--mini-card profit--discount"></span>
-                  <span class="profit profit--mini-card profit--hit">хит</span>
                   <img class="mini-card__img" src="images/product/pork.jpg" alt="свинина">
                   <div class="mini-card__container">
                     <h3 class="mini-card__title">
@@ -1059,7 +1062,7 @@
               </article>
             </li>
           </ul>
-          <button class="btn" href="#" type="button">
+          <button class="btn" type="button">
             Показать еще
           </button>
         </div>

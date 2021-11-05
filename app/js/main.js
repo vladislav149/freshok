@@ -30,15 +30,13 @@ $(function(){
 		}
 	});
 
-  $('.user__btn').on('click',function(){
+  $('.user__btn--cart').on('click',function(){
     $('.basket').toggleClass('basket--active');
   });
-
-  /* if (!$('.basket__active-part').is(e.target) // если клик был не по этому блоку
-		    && $('.basket__active-part').has(e.target).length === 0 // и не по его дочерним элементам
-        && !$('.user__btn').is(e.target)) { // и если не по кнопке
-      $('.basket').removeClass('basket--active'); //удаляю класс
-		} */
+  
+  $('.basket__inactive-part').on('click',function(){
+    $('.basket').toggleClass('basket--active');
+  });
 
   $('.basket__close').on('click',function(){
     $('.basket').removeClass('basket--active');
