@@ -32,18 +32,22 @@ $(function(){
 
   $('.banner__link').on('click',function(){
     $('.basket').addClass('basket--active');
+    $('.overlay').addClass('overlay--active');
   });
 
   $('.user__btn--cart').on('click',function(){
     $('.basket').addClass('basket--active');
+    $('.overlay').addClass('overlay--active');
   });
   
-  $('.basket__inactive-part').on('click',function(){
+  $('.overlay').on('click',function(){
     $('.basket').removeClass('basket--active');
+    $('.overlay').removeClass('overlay--active');
   });
 
   $('.basket__close').on('click',function(){
     $('.basket').removeClass('basket--active');
+    $('.overlay').removeClass('overlay--active');
   });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

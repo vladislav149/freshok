@@ -305,21 +305,17 @@
 
 .basket {
   position: fixed;
-  display: none;
+  display: flex;
+  transform: translateX(100%);
   justify-content: space-between;
   z-index: 100;
-  left: 0;
   bottom: 0;
   right: 0;
   top: 0;
+  transition: transform 0.5s;
 
   &--active {
-    display: flex;
-  }
-
-  &__inactive-part {
-    background-color: rgba($black, 0.15);
-    width: 100%;
+    transform: translateY(0);
   }
 
   &__active-part {

@@ -26,6 +26,21 @@ body {
   padding: 0 15px;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($black, 0.15);
+  z-index: 50;
+
+  &--active {
+    display: block;
+  }
+}
+
 .btn {
   padding: 11px 24px;
   background-color: $green-900;
