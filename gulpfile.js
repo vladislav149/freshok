@@ -19,7 +19,7 @@ function browsersync() {
 }
 
 function svgsprite() {
-  return src('app/images/svg/**/*.svg')
+  return src('app/images/icon/**/*.svg')
   .pipe(svgSprite({
     mode: {
       stack: {
@@ -48,8 +48,8 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/rateyo/min/jquery.rateyo.min.js',
+    'node_modules/simplebar/dist/simplebar.min.js',
     'app/js/main.js'
-
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
@@ -91,7 +91,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-  watch(['app/images/svg/**/*.svg', '!app/images/svg_sprite/sprite.svg'], svgsprite);
+  watch(['app/images/icon/**/*.svg', '!app/images/svg_sprite/sprite.svg'], svgsprite);
 }
 
 

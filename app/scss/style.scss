@@ -27,7 +27,7 @@
 
   &__bottom {
     background-color: $green-900;
-    padding: 22px 0;
+    padding: 25px 0;
   }
 
   &__bottom-inner {
@@ -103,7 +103,7 @@
     z-index: 9;
     display: none;
     overflow: auto;
-    height: 300px;
+    max-height: 60vh;
   }
 
   &__btn {
@@ -318,7 +318,7 @@
     transform: translateY(0);
   }
 
-  &__active-part {
+  &__inner {
     background-color: $white;
     max-width: 476px;
     width: 100%;
@@ -412,6 +412,10 @@
     letter-spacing: 0.03em;
     font-size: 14px;
     margin-bottom: 5px;
+  }
+
+  &__link {
+    padding: 13px 0;
   }
 
   &__price,
@@ -1100,7 +1104,7 @@
 }
 
 .news {
-  padding: 68px 0 72px;
+  padding: 66px 0 72px;
 
   &__box {
     display: flex;
@@ -1117,7 +1121,7 @@
     text-transform: uppercase;
     margin-right: 7px;
     letter-spacing: 0.03em;
-    padding: 15px 0;
+    padding: 10px 0 20px;
     transition: color 0.3s;
 
     &:hover,
@@ -1347,7 +1351,7 @@
   }
 
   &__link {
-    @extend %animation-icon;
+    @extend %animation;
     display: block;
     padding: 7px 0;
   }
@@ -1379,4 +1383,10 @@
   box-shadow: 0 0 0 3px $green-200;
   border: 1px solid $green-900;
   outline: transparent;
+}
+
+.test {
+  width: 300px;
+  height: 400px;
+  overflow: auto;
 }
