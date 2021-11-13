@@ -69,16 +69,10 @@
 
               <div class="catalog">
                 <button class="catalog__btn" type="button">
-                  <svg class="catalog__img-burger">
-                    <use xlink:href="images/svg_sprite/sprite.svg#icon--catalog"></use>
-                  </svg>
                   Каталог продуктов
-                  <svg class="catalog__img-arrow">
-                    <use xlink:href="images/svg_sprite/sprite.svg#icon--chevron"></use>
-                  </svg>
                 </button>
 
-                <ul class="catalog__items" data-simplebar>
+                <ul class="catalog__list" data-simplebar>
                   <li class="catalog__item">
                     <a class="catalog__link" href="#">
                       Овощи и фрукты
@@ -142,7 +136,8 @@
                 </ul>
               </div>
 
-              <form class="header__form" action="">
+              <form class="header__form form" action="">
+                <label class="sr-only">поиск товаров</label>
                 <input class="header__search" name="search" placeholder="Найти в магазине ..." type="search" required>
                 <svg class="header__search-img">
                   <use xlink:href="images/svg_sprite/sprite.svg#icon--search"></use>
@@ -1253,17 +1248,18 @@
             <img class="logo__img" src="images/logo.svg" alt="логотип ФрешОК">
           </a>
           <div class="footer__top">
-            <form class="footer__form" action="">
+            <div class="footer__box">
               <span class="footer__text">
                 Следите за нашими акциями
               </span>
-
-              <div class="footer__form-box">
+              <form class="footer__form form" action="">
+                <label class="sr-only">подписаться на рассылку</label>
                 <input class="footer__sub" name="subscribe" placeholder="email@email.com" type="email" id="subscribe"
                   required>
                 <button class="footer__sub-btn btn" type="submit">подписаться</button>
-              </div>
-            </form>
+              </form>
+            </div>
+
 
             <ul class="footer__top-list">
               <li class="footer__top-item">
