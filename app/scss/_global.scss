@@ -53,27 +53,6 @@ body {
   border: none;
   letter-spacing: 0.03em;
   @extend %animation-btn;
-}
-
-.title {
-  text-transform: uppercase;
-  font-size: 32px;
-  @extend %ruda;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.ru {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  color: $dark-500;
-}
-
-.quantify {
-  display: flex;
-  align-self: center;
 
   &--minus {
     width: 24px;
@@ -121,16 +100,40 @@ body {
     }
   }
 
+  &--quantify {
+    border-radius: 0;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 32px;
+  @extend %ruda;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.currency {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: $dark-500;
+}
+
+.quantify {
+  display: flex;
+  align-self: center;
+
   &__count {
     background-color: $green-100;
     width: 36px;
     height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
+    border: none;
+    text-align: center;
   }
 }
 

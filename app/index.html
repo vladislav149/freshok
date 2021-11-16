@@ -138,10 +138,8 @@
 
               <form class="header__form form" action="">
                 <label class="sr-only">поиск товаров</label>
-                <input class="header__search" name="search" placeholder="Найти в магазине ..." type="search" required>
-                <svg class="header__search-img">
-                  <use xlink:href="images/svg_sprite/sprite.svg#icon--search"></use>
-                </svg>
+                <input class="header__search" name="search" placeholder="Найти в магазине ..." type="search" required
+                  autofocus>
                 <button class="header__search-btn" type="submit">поиск</button>
               </form>
 
@@ -180,92 +178,96 @@
     </header>
 
     <section class="basket">
-      <div class="basket__inner">
-        <div class="basket__top">
-          <div class="basket__top-box">
-            <h2 class="basket__title">
-              Корзина
-            </h2>
-            <button class="basket__clear" type="reset">
-              очистить корзину
-            </button>
-          </div>
-          <button class="basket__close">
-            <span class="sr-only">закрыть корзину</span>
+      <div class="basket__top">
+        <div class="basket__top-box">
+          <h2 class="basket__title">
+            Корзина
+          </h2>
+          <button class="basket__clear" type="reset">
+            очистить корзину
           </button>
         </div>
-        <ul class="basket__list">
-          <li class="basket__item">
-            <article class="basket__product">
-              <img class="basket__img" src="images/product/pineapple1.jpg" alt="ананас">
-              <div class="basket__box">
-                <h3 class="basket__name">
-                  <a class="basket__link" href="">
-                    Ананас, 1 кг
-                  </a>
-                </h3>
-                <span class="basket__price">999<span class="ru">₽</span></span>
-              </div>
-              <div class="basket__quantify quantify">
-                <button class="btn quantify--minus" type="button">
-                  <span class="sr-only">уменьшить количество товаров на 1</span>
-                </button>
-
-                <input type="text" class="quantify__count">
-
-                <button class="btn quantify--plus" type="button">
-                  <span class="sr-only">увеличить количество товаров на 1</span>
-                </button>
-              </div>
-              <span class="basket__sum">1998<span class="ru">₽</span></span>
-              <button class="basket__delete">
-                <span class="sr-only">удалить товар из корзины</span>
-              </button>
-            </article>
-          </li>
-
-          <li class="basket__item">
-            <article class="basket__product">
-              <img class="basket__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
-              <div class="basket__box">
-                <h3 class="basket__name">
-                  <a class="basket__link" href="">
-                    Питахайя красная с белой мякотью, 1шт
-                  </a>
-                </h3>
-                <span class="basket__price">1019<span class="ru">₽</span></span>
-              </div>
-              <div class="basket__quantify quantify">
-                <button class="btn quantify--minus" type="button">
-                  <span class="sr-only">уменьшить количество товаров на 1</span>
-                </button>
-
-                <div class="quantify__count">2</div>
-
-                <button class="btn quantify--plus" type="button">
-                  <span class="sr-only">увеличить количество товаров на 1</span>
-                </button>
-              </div>
-              <span class="basket__sum">2038<span class="ru">₽</span></span>
-              <button class="basket__delete">
-                <span class="sr-only">удалить товар из корзины</span>
-              </button>
-            </article>
-          </li>
-        </ul>
-        <div class="basket__total">
-          <span class="basket__text">
-            Товаров на сумму
-          </span>
-
-          <span class="basket__total-price">
-            2038<span class="ru basket__ru">₽</span>
-          </span>
-        </div>
-        <button class="basket__checkout btn" type="submit">
-          Оформить заказ
+        <button class="basket__close">
+          <span class="sr-only">закрыть корзину</span>
         </button>
       </div>
+      <ul class="basket__list">
+        <li class="basket__item">
+          <article class="basket-product">
+            <a class="basket-product__link" href="#">
+              <img class="basket-product__img" src="images/product/pineapple1.jpg" alt="ананас">
+              <div class="basket-product__box">
+                <h3 class="basket-product__name">
+                  Ананас, 1 кг
+                </h3>
+                <span class="basket-product__price">999<span class="currency">₽</span></span>
+              </div>
+            </a>
+
+            <form class="basket-product__quantify quantify">
+              <label class="sr-only">выбор количества товаров</label>
+              <button class="btn btn--minus btn--quantify" type="button">
+                <span class="sr-only">уменьшить количество товаров на 1</span>
+              </button>
+
+              <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+              <button class="btn btn--plus btn--quantify" type="button">
+                <span class="sr-only">увеличить количество товаров на 1</span>
+              </button>
+            </form>
+
+            <span class="basket-product__sum">1998<span class="currency">₽</span></span>
+            <button class="basket-product__delete">
+              <span class="sr-only">удалить товар из корзины</span>
+            </button>
+          </article>
+        </li>
+
+        <li class="basket__item">
+          <article class="basket-product">
+            <a class="basket-product__link" href="#">
+              <img class="basket-product__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+              <div class="basket-product__box">
+                <h3 class="basket-product__name">
+                  Питахайя красная с белой мякотью, 1шт
+                </h3>
+                <span class="basket-product__price">1019<span class="currency">₽</span></span>
+              </div>
+            </a>
+
+            <form class="basket-product__quantify quantify">
+              <label class="sr-only">выбор количества товаров</label>
+              <button class="btn btn--minus btn--quantify" type="button">
+                <span class="sr-only">уменьшить количество товаров на 1</span>
+              </button>
+
+              <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+              <button class="btn btn--plus btn--quantify" type="button">
+                <span class="sr-only">увеличить количество товаров на 1</span>
+              </button>
+            </form>
+
+            <span class="basket-product__sum">2038<span class="currency">₽</span></span>
+            <button class="basket-product__delete">
+              <span class="sr-only">удалить товар из корзины</span>
+            </button>
+          </article>
+        </li>
+      </ul>
+      <div class="basket__total">
+        <span class="basket__text">
+          Товаров на сумму
+        </span>
+
+        <span class="basket__total-price">
+          2038<span class="currency basket__currency">₽</span>
+        </span>
+      </div>
+      <button class="basket__checkout btn" type="submit">
+        Оформить заказ
+      </button>
     </section>
 
     <main class="main">
@@ -332,33 +334,26 @@
         <div class="container">
           <h2 class="sr-only">Наши преимущества</h2>
           <ul class="benefits__list">
-            <li class="benefits__item">
-              <svg class="benefits__img">
-                <use xlink:href="images/svg_sprite/sprite.svg#benefits--scooter"></use>
-              </svg>
-              <div class="benefits__item-inner">
+            <li class="benefits__item" style="background-image: url(images/svg_sprite/sprite.svg#benefits--scooter);">
+              <div class="benefits__box">
                 <h3 class="benefits__title">Бесплатная доставка</h3>
                 <span class="benefits__text">Для заказов на сумму от 500 ₽</span>
               </div>
 
             </li>
 
-            <li class="benefits__item">
-              <svg class="benefits__img">
-                <use xlink:href="images/svg_sprite/sprite.svg#benefits--return-box"></use>
-              </svg>
-              <div class="benefits__item-inner">
+            <li class="benefits__item"
+              style="background-image: url(images/svg_sprite/sprite.svg#benefits--return-box);">
+              <div class="benefits__box">
                 <h3 class="benefits__title">Возврат товара</h3>
                 <span class="benefits__text">Если товары были испорчены</span>
               </div>
 
             </li>
 
-            <li class="benefits__item">
-              <svg class="benefits__img">
-                <use xlink:href="images/svg_sprite/sprite.svg#benefits--24-hours"></use>
-              </svg>
-              <div class="benefits__item-inner">
+            <li class="benefits__item benefits__item--24-hours"
+              style="background-image: url(images/svg_sprite/sprite.svg#benefits--24-hours);">
+              <div class="benefits__box">
                 <h3 class="benefits__title">Поддержка 24/7</h3>
                 <span class="benefits__text">Лучшие операторы</span>
               </div>
@@ -376,77 +371,82 @@
               топовые товары
             </h2>
 
-            <ul class="filter">
-              <li class="filter__item">
-                <button class="filter__btn " type="button" data-filter="all">
+            <ul class="filter-product">
+              <li class="filter-product__item">
+                <button class="filter-product__btn " type="button" data-filter="all">
                   все товары
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-1">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-1">
                   фрукты
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-2">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-2">
                   овощи
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-3">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-3">
                   Напитки
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-4">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-4">
                   бакалея
                 </button>
               </li>
             </ul>
 
-            <ul class="product">
-              <li class="product__list mix category-1">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit">новинка</span>
-                      <span class="profit profit--discount">-50%</span>
-                      <span class="profit profit--hit"></span>
+            <ul class="product-list">
+              <li class="product-list__item mix category-1">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge">новинка</span>
+                      <span class="badge badge--discount">-50%</span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/pineapple.jpg" alt="ананас">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/pineapple.jpg" alt="ананас">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Ананас, 1кг</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old">1999 ₽</span>
-                        <span class="card__price-new">999 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Ананас, 1кг</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old">1999 ₽</span>
+                        <span class="card-product__price-new">999 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
-                        <svg class="card__btn-img">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                         <span class="sr-only">добавить в корзину</span>
@@ -456,45 +456,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-1">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit"></span>
-                      <span class="profit profit--discount"></span>
-                      <span class="profit profit--hit"></span>
+              <li class="product-list__item mix category-1">
+                <article class="card-product-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge"></span>
+                      <span class="badge badge--discount"></span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/lemon.jpg" alt="лимон">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/lemon.jpg" alt="лимон">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Лимон, 1кг</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">199 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Лимон, 1кг</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">199 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -503,45 +508,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-1">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit profit--hit">хит</span>
-                      <span class="profit"></span>
-                      <span class="profit profit--discount"></span>
+              <li class="product-list__item mix category-1">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge badge--hit">хит</span>
+                      <span class="badge"></span>
+                      <span class="badge badge--discount"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Питахайя красная с белой мякотью, 1шт</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">1019 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Питахайя красная с белой мякотью, 1шт</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">1019 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -550,45 +560,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-2">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit">новинка</span>
-                      <span class="profit profit--discount"></span>
-                      <span class="profit profit--hit"></span>
+              <li class="product-list__item mix category-2">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge">новинка</span>
+                      <span class="badge badge--discount"></span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/paprik.jpg" alt="перец">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/paprik.jpg" alt="перец">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Перец оранжевый, 1кг</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">349 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Перец оранжевый, 1кг</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">349 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -597,45 +612,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-2">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit profit--hit">хит</span>
-                      <span class="profit"></span>
-                      <span class="profit profit--discount"></span>
+              <li class="product-list__item mix category-2">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge badge--hit">хит</span>
+                      <span class="badge"></span>
+                      <span class="badge badge--discount"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/carrot.jpg" alt="морковь">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/carrot.jpg" alt="морковь">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">49 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">49 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -644,46 +664,53 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-3">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit profit--discount">-30%</span>
-                      <span class="profit"></span>
-                      <span class="profit profit--hit"></span>
+              <li class="product-list__item mix category-3">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge badge--discount">-30%</span>
+                      <span class="badge"></span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/juice.jpg" alt="напиток сокосодержащий красный апельсин">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/juice.jpg"
+                      alt="напиток сокосодержащий красный апельсин">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
+                      апельсин
                       безалкогольн...</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old">299 ₽</span>
-                        <span class="card__price-new">199 ₽</span>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old">299 ₽</span>
+                        <span class="card-product__price-new">199 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -692,45 +719,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-4">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit">новинка</span>
-                      <span class="profit profit--discount"></span>
-                      <span class="profit profit--hit"></span>
+              <li class="product-list__item mix category-4">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge">новинка</span>
+                      <span class="badge badge--discount"></span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/coffee.jpg" alt="кофе">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/coffee.jpg" alt="кофе">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">877 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">877 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -739,45 +771,50 @@
                 </article>
               </li>
 
-              <li class="product__list mix category-4">
-                <article class="card">
-                  <div class="card__top">
-                    <div class="card__top-box">
-                      <span class="profit"></span>
-                      <span class="profit profit--discount"></span>
-                      <span class="profit profit--hit"></span>
+              <li class="product-list__item mix category-4">
+                <article class="card-product">
+                  <div class="card-product__top">
+                    <div class="card-product__top-box">
+                      <span class="badge"></span>
+                      <span class="badge badge--discount"></span>
+                      <span class="badge badge--hit"></span>
                     </div>
-                    <button class="card__like" type="button">
+                    <button class="card-product__like" type="button">
                       <span class="sr-only">добавить в избранное</span>
-                      <svg class="card__like-img">
+                      <svg class="card-product__like-img">
                         <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
                       </svg>
                     </button>
                   </div>
 
-                  <a class="card__link" href="#">
-                    <img class="card__img" src="images/product/ketchup.jpg" alt="кетчуп">
+                  <a class="card-product__link" href="#">
+                    <img class="card-product__img" src="images/product/ketchup.jpg" alt="кетчуп">
                   </a>
 
-                  <div class="card__bottom">
-                    <h3 class="card__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
-                    <div class="card__bottom-box">
-                      <div class="card__price">
-                        <span class="card__price-old"></span>
-                        <span class="card__price-new">600 ₽</span>
+                  <div class="card-product__bottom">
+                    <h3 class="card-product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
+                    <div class="card-product__bottom-box">
+                      <div class="card-product__price">
+                        <span class="card-product__price-old"></span>
+                        <span class="card-product__price-new">600 ₽</span>
                       </div>
-                      <div class="quantify">
-                        <button class="btn quantify--minus" type="button">
+
+                      <form class="quantify">
+                        <label class="sr-only">выбор количества товаров</label>
+                        <button class="btn btn--minus" type="button">
                           <span class="sr-only">уменьшить количество товаров на 1</span>
                         </button>
-                        <div class="quantify__count">1</div>
-                        <button class="btn quantify--plus" type="button">
+
+                        <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                        <button class="btn btn--plus" type="button">
                           <span class="sr-only">увеличить количество товаров на 1</span>
                         </button>
-                      </div>
-                      <button class="card__btn btn" type="button">
+                      </form>
+
+                      <button class="card-product__btn btn" type="button">
                         <span class="sr-only">добавить в корзину</span>
-                        <svg class="card__btn-img">
+                        <svg class="card-product__btn-img">
                           <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
                         </svg>
                       </button>
@@ -793,58 +830,49 @@
         </div>
       </section>
 
-      <section class="banner">
+      <section class="banner-promotion">
         <div class="container">
           <h2 class="sr-only">баннер</h2>
-          <ul class="banner__list">
-            <li class="banner__item banner__item--white"
+          <ul class="banner-promotion__list">
+            <li class="banner-promotion__item banner-promotion__item--white"
               style="background-image: url(images/banners/banners-bg-1.jpg);">
-              <h3 class="banner__title">
+              <h3 class="banner-promotion__title">
                 свежайшие фрукты
               </h3>
-              <div class="banner__text">
+              <div class="banner-promotion__text banner-promotion__text--white">
                 <p>
-                  начни фруктовое лето
-                </p>
-                <p>
-                  всего от 99 ₽
+                  начни фруктовое лето всего от 99 ₽
                 </p>
               </div>
-              <a class="banner__link banner__link--white" href="#">
+              <a class="banner-promotion__link banner-promotion__link--white" href="#">
                 перейти к покупкам
               </a>
             </li>
 
-            <li class="banner__item" style="background-image: url(images/banners/banners-bg-2.jpg);">
-              <h3 class="banner__title">
+            <li class="banner-promotion__item" style="background-image: url(images/banners/banners-bg-2.jpg);">
+              <h3 class="banner-promotion__title">
                 сезонная распродажа
               </h3>
-              <div class="banner__text">
+              <div class="banner-promotion__text">
                 <p>
-                  овощепад
-                </p>
-                <p>
-                  до -50%
+                  овощепад до -50%
                 </p>
               </div>
-              <a class="banner__link" href="#">
+              <a class="banner-promotion__link" href="#">
                 перейти к покупкам
               </a>
             </li>
 
-            <li class="banner__item" style="background-image: url(images/banners/banners-bg-3.jpg);">
-              <h3 class="banner__title">
+            <li class="banner-promotion__item" style="background-image: url(images/banners/banners-bg-3.jpg);">
+              <h3 class="banner-promotion__title">
                 ням-ням
               </h3>
-              <div class="banner__text">
+              <div class="banner-promotion__text">
                 <p>
-                  свежий
-                </p>
-                <p>
-                  хлебчик
+                  свежий хлебчик
                 </p>
               </div>
-              <a class="banner__link" href="#">
+              <a class="banner-promotion__link" href="#">
                 перейти к покупкам
               </a>
             </li>
@@ -852,39 +880,39 @@
         </div>
       </section>
 
-      <section class="promo" data-ref="container-2">
+      <section class="promo-product" data-ref="container-2">
         <div class="container">
-          <div class="promo__inner">
-            <h2 class="title promo__title">
+          <div class="promo-product__inner">
+            <h2 class="title promo-product__title">
               Акции
             </h2>
 
-            <ul class="filter filter--mini-card">
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter="all">
+            <ul class="filter-product promo-product__filter">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter="all">
                   все товары
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-1">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-1">
                   новинки
                 </button>
               </li>
 
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter=".category-2">
+              <li class="filter-product__item">
+                <button class="filter-product__btn" type="button" data-filter=".category-2">
                   хиты
                 </button>
               </li>
             </ul>
-            <ul class="promo__list">
-              <li class="promo__item mix category-1">
+            <ul class="promo-product__list">
+              <li class="promo-product__item mix category-1">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card">новинка</span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit"></span>
+                    <span class="badge badge--mini-card">новинка</span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit"></span>
                     <img class="mini-card__img" src="images/product/pineapple.jpg" alt="ананас">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -908,12 +936,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-1">
+              <li class="promo-product__item mix category-1">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card">новинка</span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit"></span>
+                    <span class="badge badge--mini-card">новинка</span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit"></span>
                     <img class="mini-card__img" src="images/product/coffee.jpg" alt="кофе">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -936,12 +964,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-1">
+              <li class="promo-product__item mix category-1">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card">новинка</span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit"></span>
+                    <span class="badge badge--mini-card">новинка</span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit"></span>
                     <img class="mini-card__img" src="images/product/strawberry.jpg" alt="клубника">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -965,12 +993,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-1">
+              <li class="promo-product__item mix category-1">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card">новинка</span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit"></span>
+                    <span class="badge badge--mini-card">новинка</span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit"></span>
                     <img class="mini-card__img" src="images/product/mango.jpg" alt="манго">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -994,12 +1022,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-1">
+              <li class="promo-product__item mix category-1">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card">новинка</span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit"></span>
+                    <span class="badge badge--mini-card">новинка</span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit"></span>
                     <img class="mini-card__img" src="images/product/salmon.jpg" alt="лосось">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -1023,12 +1051,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-2">
+              <li class="promo-product__item mix category-2">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card"></span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit">хит</span>
+                    <span class="badge badge--mini-card"></span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit">хит</span>
                     <img class="mini-card__img" src="images/product/veg-juice.jpg" alt="сок">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -1052,12 +1080,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-2">
+              <li class="promo-product__item mix category-2">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card"></span>
-                    <span class="profit profit--mini-card profit--discount"></span>
-                    <span class="profit profit--mini-card profit--hit">хит</span>
+                    <span class="badge badge--mini-card"></span>
+                    <span class="badge badge--mini-card badge--discount"></span>
+                    <span class="badge badge--mini-card badge--hit">хит</span>
                     <img class="mini-card__img" src="images/product/basket.jpg" alt="фруктовая корзина">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -1081,12 +1109,12 @@
                 </article>
               </li>
 
-              <li class="promo__item mix category-2">
+              <li class="promo-product__item mix category-2">
                 <article class="mini-card">
                   <a class="mini-card__link" href="#">
-                    <span class="profit profit--mini-card profit--hit">хит</span>
-                    <span class="profit profit--mini-card"></span>
-                    <span class="profit profit--mini-card profit--discount"></span>
+                    <span class="badge badge--mini-card badge--hit">хит</span>
+                    <span class="badge badge--mini-card"></span>
+                    <span class="badge badge--mini-card badge--discount"></span>
                     <img class="mini-card__img" src="images/product/pork.jpg" alt="свинина">
                     <div class="mini-card__container">
                       <h3 class="mini-card__title">
@@ -1254,8 +1282,7 @@
               </span>
               <form class="footer__form form" action="">
                 <label class="sr-only">подписаться на рассылку</label>
-                <input class="footer__sub" name="subscribe" placeholder="email@email.com" type="email" id="subscribe"
-                  required>
+                <input class="footer__sub" name="subscribe" placeholder="email@email.com" type="email" required>
                 <button class="footer__sub-btn btn" type="submit">подписаться</button>
               </form>
             </div>
