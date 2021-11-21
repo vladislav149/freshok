@@ -46,6 +46,11 @@ button,
 textarea,
 select {
   font: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  letter-spacing: inherit;
 }
 
 a {
@@ -55,8 +60,6 @@ a {
 
 button {
   cursor: pointer;
-  color: inherit;
-  letter-spacing: inherit;
 }
 
 address {
