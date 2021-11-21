@@ -1,0 +1,70 @@
+.banner-promotion {
+  padding-bottom: 72px;
+  text-transform: uppercase;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+  }
+
+  &__item {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 300px;
+    width: 100%;
+    padding-top: 76px;
+    padding-left: 32px;
+    border-radius: 6px;
+
+    &--big {
+      max-width: 630px;
+      color: $white;
+    }
+  }
+
+  &__title {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    margin-bottom: 7px;
+    font-family: 'Ruda',
+      sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    max-width: 160px;
+
+    &--big {
+      max-width: 365px;
+    }
+  }
+
+  &__link {
+    letter-spacing: 0.015em;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: $black;
+      display: block;
+      bottom: -6px;
+    }
+
+    &--big {
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.slick-arrows {
+  transition: background-color 0.3s,
+    box-shadow 0.3s;
+
+  &:focus {
+    outline: transparent;
+    background-color: $green-200;
+    box-shadow: 0 0 0 3px rgba($green-900, 0.5);
+  }
+
+  &:hover,
+  &:active {
+    background-color: $green-200;
+  }
+}

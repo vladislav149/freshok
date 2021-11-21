@@ -1,0 +1,18 @@
+.top-product {
+  padding: 72px 0;
+  letter-spacing: 0.03em;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+  }
+
+  &__btn {
+    color: $green-900;
+    background-color: $white;
+    border: 1px solid $green-900;
+  }
+}

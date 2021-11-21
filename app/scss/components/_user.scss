@@ -1,0 +1,45 @@
+.user {
+  max-width: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 3px;
+  }
+
+  &__btn-img {
+    object-fit: contain;
+
+    &--user {
+      width: 25px;
+      height: 32px;
+    }
+
+    &--heart {
+      width: 32px;
+      height: 29px;
+    }
+
+    &--cart {
+      width: 32px;
+      height: 31px;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    background-color: $white;
+    border-radius: 50%;
+    color: $red-900;
+    font-size: 10px;
+    line-height: 1;
+    padding: 4px 3px;
+    left: 3px;
+    top: 4px;
+  }
+}

@@ -1,0 +1,35 @@
+.promo-product {
+  padding: 72px 0;
+  background-color: $silver-200;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__filter {
+    letter-spacing: 0.1em;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__item {
+    background-color: $white;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    padding: 12px 12px 10px 12px;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $green-900;
+    }
+  }
+}

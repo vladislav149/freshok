@@ -1,0 +1,28 @@
+.header-address {
+  display: flex;
+
+  &__adds {
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    margin-right: 12px;
+
+    &--address {
+      width: 32px;
+      height: 22px;
+    }
+
+    &--tel {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.card-news {
+  position: relative;
+
+  &:hover .card-news__title {
+    color: $green-900;
+  }
+
+  &__img {
+    width: 410px;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 18px;
+    transition: color 0.3s;
+  }
+
+  &__date {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background-color: $white;
+    padding-top: 18px;
+    text-align: center;
+    width: 65px;
+    height: 76px;
+    text-transform: uppercase;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__month {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 3px;
+  }
+
+  &__day {
+    font-family: 'Ruda',
+      sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+  }
+}

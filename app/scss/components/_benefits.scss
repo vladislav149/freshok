@@ -1,0 +1,49 @@
+.benefits {
+  background-color: $silver-100;
+  padding: 50px 0 30px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: 75px;
+  }
+
+  &__item {
+    color: $dark-500;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100px;
+    padding-left: 97px;
+
+    &:not(:last-child) {
+      margin-right: 43px;
+    }
+
+    &--24-hours {
+      background-size: 90px;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 24px;
+  }
+
+  &__box {
+    max-width: 190px;
+  }
+
+  &__title {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    font-weight: 400;
+  }
+}

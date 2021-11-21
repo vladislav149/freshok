@@ -1,0 +1,45 @@
+.filter-product {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    padding: 12px 0;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      opacity: 0.2;
+      left: 0;
+      bottom: 10px;
+      transition: background-color 0.3s;
+    }
+
+    &:hover::after {
+      background-color: $green-900;
+    }
+  }
+
+  .mixitup-control-active::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    opacity: 0.2;
+    left: 0;
+    bottom: 10px;
+    background-color: $green-900;
+  }
+}

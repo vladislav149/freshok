@@ -1,0 +1,121 @@
+.footer {
+  background-color: $dark-800;
+  padding: 30px 0 0;
+  color: $white;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+
+  &__top {
+    position: relative;
+    padding-bottom: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      opacity: 0.1;
+      height: 1px;
+      width: 100%;
+      bottom: 1px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+  }
+
+  &__form {
+    max-width: 306px;
+    height: 40px;
+  }
+
+  &__text {
+    display: block;
+    line-height: 1;
+    margin-bottom: 19px;
+  }
+
+  &__sub {
+    padding: 12px;
+    background-color: $white;
+    border-radius: 6px 0 0 6px;
+    color: $dark-400;
+    line-height: 1;
+    width: 100%;
+    letter-spacing: 0.03em;
+
+    &::placeholder {
+      color: $dark-400;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+  }
+
+  &__btn {
+    padding: 12px 16px 12px 16px;
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  &__list {
+    column-count: 3;
+    column-gap: 140px;
+    max-width: 480px;
+    padding-left: 10px;
+  }
+
+  &__item {
+    width: max-content;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    padding: 2px 0
+  }
+
+  &__address {
+    margin-right: 5px;
+  }
+
+  &__info {
+    margin-bottom: 15px;
+    display: block;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__block {
+    padding: 16px 0 23px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    margin-right: auto;
+  }
+
+  &__accept {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 49px;
+    height: 44px;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+      width: 93px;
+    }
+  }
+}
