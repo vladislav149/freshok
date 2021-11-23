@@ -1,5 +1,7 @@
 $(function(){
+ 
   
+//slick-slider (слайдер и кастомыне кнопки)  
   $('.hero__list').slick({
     dots:false,
     prevArrow: '<button type="button" class="slick-prev slick-arrows"><svg class="slick-arrows__arrows"><use xlink:href="images/svg_sprite/sprite.svg#icon--arrow-left"></use></svg></button>',
@@ -7,6 +9,8 @@ $(function(){
     nextArrow: '<button type="button" class="slick-next slick-arrows"><svg class="slick-arrows__arrows"><use xlink:href="images/svg_sprite/sprite.svg#icon--arrow-right"></use></svg></button>'
   });
 
+
+//drop down menu (каталог продуктов)
   $('.catalog__btn').on('click',function(){
     $('.catalog__btn').toggleClass('catalog__btn--active');
   });
@@ -31,19 +35,30 @@ $(function(){
 	});
 
   $('.user__btn').on('click',function(){
-    $('.basket').toggleClass('basket--active');
+    $('.basket').addClass('basket--active');
+    $('body').addClass('overlay');
   });
 
-  /* if (!$('.basket__active-part').is(e.target) // если клик был не по этому блоку
-		    && $('.basket__active-part').has(e.target).length === 0 // и не по его дочерним элементам
-        && !$('.user__btn').is(e.target)) { // и если не по кнопке
-      $('.basket').removeClass('basket--active'); //удаляю класс
-		} */
+
+//корзина
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $('.basket');   // тут указываем класс элемента
+		if (!$('.basket').is(e.target) // если клик был не по этому блоку
+		    && $('.basket').has(e.target).length === 0 // и не по его дочерним элементам
+        && !$('.basket__close').is(e.target)) { // и если не по кнопке//
+      $('.basket').removeClass('basket--active');
+      $('body').removeClass('overlay'); //удаляю класс
+		}
+	});
 
   $('.basket__close').on('click',function(){
     $('.basket').removeClass('basket--active');
+    $('body').removeClass('overlay');
   });
 
+
+
+//mixitup (фильтр)
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
  

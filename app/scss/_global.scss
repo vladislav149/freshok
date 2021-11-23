@@ -27,8 +27,9 @@ body {
   padding: 0 15px;
 }
 
-.overlay {
-  display: none;
+.overlay:after {
+  content: "";
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
