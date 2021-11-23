@@ -46,7 +46,7 @@ $(function(){
 		if (!$('.basket').is(e.target) // если клик был не по этому блоку
 		    && $('.basket').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.basket__close').is(e.target)) { // и если не по кнопке//
-      $('.basket').removeClass('basket--active');
+      $('.basket').removeClass('basket--active'); //удаляю класс
       $('body').removeClass('overlay'); //удаляю класс
 		}
 	});
@@ -54,6 +54,25 @@ $(function(){
   $('.basket__close').on('click',function(){
     $('.basket').removeClass('basket--active');
     $('body').removeClass('overlay');
+  });
+
+//кастомные кнопки для input[number]
+
+  $(document).ready(function() {
+    $('.btn--minus').click(function () {
+      var $input = $(this).parent().find('input');
+      var count = parseInt($input.val()) - 1;
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    });
+    $('.btn--plus').click(function () {
+      var $input = $(this).parent().find('input');
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+      return false;
+    });
   });
 
 

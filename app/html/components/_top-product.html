@@ -1,0 +1,466 @@
+<section class="top-product" data-ref="container-1">
+  <div class="container">
+    <div class="top-product__inner">
+
+      <h2 class="title top-product__title">
+        топовые товары
+      </h2>
+
+      <ul class="filter-product">
+        <li class="filter-product__item">
+          <button class="filter-product__btn " type="button" data-filter="all">
+            все товары
+          </button>
+        </li>
+
+        <li class="filter-product__item">
+          <button class="filter-product__btn" type="button" data-filter=".category-1">
+            фрукты
+          </button>
+        </li>
+
+        <li class="filter-product__item">
+          <button class="filter-product__btn" type="button" data-filter=".category-2">
+            овощи
+          </button>
+        </li>
+
+        <li class="filter-product__item">
+          <button class="filter-product__btn" type="button" data-filter=".category-3">
+            Напитки
+          </button>
+        </li>
+
+        <li class="filter-product__item">
+          <button class="filter-product__btn" type="button" data-filter=".category-4">
+            бакалея
+          </button>
+        </li>
+      </ul>
+
+      <ul class="product-list">
+        <li class="product-list__item mix category-1">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge">новинка</span>
+                <span class="badge badge--red">-50%</span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/pineapple.jpg" alt="ананас">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Ананас, 1кг</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old">1999 ₽</span>
+                  <span class="card-product__price">999 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                  <span class="sr-only">добавить в корзину</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-1">
+          <article class="card-product-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge"></span>
+                <span class="badge badge--red"></span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/lemon.jpg" alt="лимон">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Лимон, 1кг</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">199 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-1">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge badge--orange">хит</span>
+                <span class="badge"></span>
+                <span class="badge badge--red"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Питахайя красная с белой мякотью, 1шт</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">1019 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-2">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge">новинка</span>
+                <span class="badge badge--red"></span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/paprik.jpg" alt="перец">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Перец оранжевый, 1кг</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">349 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-2">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge badge--orange">хит</span>
+                <span class="badge"></span>
+                <span class="badge badge--red"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/carrot.jpg" alt="морковь">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Морковь молодая с бабушкиной грядки, 1кг</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">49 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-3">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge badge--red">-30%</span>
+                <span class="badge"></span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/juice.jpg"
+                alt="напиток сокосодержащий красный апельсин">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
+                апельсин
+                безалкогольн...</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old">299 ₽</span>
+                  <span class="card-product__price">199 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-4">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge">новинка</span>
+                <span class="badge badge--red"></span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/coffee.jpg" alt="кофе">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">877 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="product-list__item mix category-4">
+          <article class="card-product">
+            <div class="card-product__top">
+              <div class="card-product__top-box">
+                <span class="badge"></span>
+                <span class="badge badge--red"></span>
+                <span class="badge badge--orange"></span>
+              </div>
+              <button class="card-product__like" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="card-product__like-img">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--heart_gray"></use>
+                </svg>
+              </button>
+            </div>
+
+            <a class="card-product__link" href="#">
+              <img class="card-product__img" src="images/product/ketchup.jpg" alt="кетчуп">
+            </a>
+
+            <div class="card-product__bottom">
+              <h3 class="card-product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл</h3>
+              <div class="card-product__bottom-box">
+                <div class="card-product__box">
+                  <span class="card-product__price--old"></span>
+                  <span class="card-product__price">600 ₽</span>
+                </div>
+
+                <form class="quantify">
+                  <label class="sr-only">выбор количества товаров</label>
+                  <button class="btn btn--minus animation-btn" type="button">
+                    <span class="sr-only">уменьшить количество товаров на 1</span>
+                  </button>
+
+                  <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+                  <button class="btn btn--plus animation-btn" type="button">
+                    <span class="sr-only">увеличить количество товаров на 1</span>
+                  </button>
+                </form>
+
+                <button class="card-product__btn btn animation-btn" type="button">
+                  <span class="sr-only">добавить в корзину</span>
+                  <svg class="card-product__btn-img">
+                    <use xlink:href="images/svg_sprite/sprite.svg#icon--cart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <button class="btn top-product__btn animation-btn-yen" type="button">
+        Показать еще
+      </button>
+    </div>
+  </div>
+</section>
