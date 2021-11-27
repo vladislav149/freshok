@@ -2,6 +2,7 @@
 @import 'vars';
 @import 'reset';
 @import 'libs';
+@import 'mixin';
 @import 'global';
 @import 'animation';
 
@@ -29,3 +30,4 @@
 @import 'components/footer';
 @import 'components/social';
 @import 'components/slick-arrows';
+@import 'components/_burger';

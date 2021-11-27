@@ -16,20 +16,20 @@ $(function(){
   });
 
   $('.catalog__btn').click(function() { // медленное появление и исчезновение
-    var catalog__items = $(this).next();
+    var catalog__list = $(this).next();
 
-    if(catalog__items.is(':visible'))
-        catalog__items.slideUp('slow');
+    if(catalog__list.is(':visible'))
+        catalog__list.slideUp('slow');
     else
-        catalog__items.slideDown('slow');
+        catalog__list.slideDown('slow');
   });
 
   $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $('.catalog__items');   // тут указываем класс элемента
-		if (!$('.catalog__items').is(e.target) // если клик был не по этому блоку
-		    && $('.catalog__items').has(e.target).length === 0 // и не по его дочерним элементам
+		if (!$('.catalog__list').is(e.target) // если клик был не по этому блоку
+		    && $('.catalog__list').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.catalog__btn').is(e.target)) { // и если не по кнопке
-			$('.catalog__items').slideUp('slow'); // медленно скрываю его
+			$('.catalog__list').slideUp('slow'); // медленно скрываю его
       $('.catalog__btn').removeClass('catalog__btn--active'); //удаляю класс
 		}
 	});

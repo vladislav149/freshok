@@ -8,6 +8,10 @@
 
     &:not(:last-child) {
       margin-right: 48px;
+
+      @include w992 {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -23,6 +27,12 @@
     &--tel {
       width: 22px;
       height: 22px;
+    }
+  }
+
+  &__text {
+    @include w768 {
+      display: none;
     }
   }
 }

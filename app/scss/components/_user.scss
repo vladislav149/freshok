@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include w992 {
+    width: max-content;
+  }
+
   &__btn {
     position: relative;
     height: 50px;

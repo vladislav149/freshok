@@ -27,12 +27,28 @@
   &__bottom-inner {
     display: flex;
     align-items: center;
+
+    @include w768 {
+      justify-content: space-between;
+    }
   }
 
   &__form {
     max-width: 576px;
     margin-right: auto;
     position: relative;
+
+    @include w1200 {
+      max-width: 330px;
+    }
+
+    @include w992 {
+      max-width: 280px;
+    }
+
+    @include w768 {
+      display: none;
+    }
 
     &::before {
       content: "";
@@ -47,15 +63,21 @@
       left: 6px;
       top: 50%;
       transform: translateY(-50%);
+
+      @include w992 {
+        left: 0;
+      }
     }
   }
 
   &__search {
-    padding: 15px 100px 15px 51px;
+    padding: 15px 10px 15px 30px;
     border-radius: 6px 0 0 6px;
     background-color: $white;
     color: $dark-800;
     width: 100%;
+
+    @include w992 {}
 
     &::placeholder {
       color: $dark-800;
@@ -71,6 +93,14 @@
     padding: 15px 52px;
     text-transform: uppercase;
     transition: box-shadow 0.3s, outline 0.3s, background-color 0.3s;
+
+    @include w1200 {
+      padding: 15px 30px;
+    }
+
+    @include w992 {
+      padding: 15px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);

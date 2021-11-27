@@ -4,12 +4,18 @@
       <div class="container">
         <div class="header__top-inner">
 
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">кнопка меню</span>
+          </button>
+
           <address class="header-address">
             <a class="header-address__adds animation" href="#">
               <svg class="header-address__img header-address__img--address">
                 <use xlink:href="images/svg_sprite/sprite.svg#icon--address"></use>
               </svg>
-              адрес и время доставки
+              <span class="header-address__text">адрес и время доставки</span>
+
             </a>
 
             <a class="header-address__adds animation" href="tel:+7907288365">
@@ -17,7 +23,7 @@
                 <use xlink:href="images/svg_sprite/sprite.svg#icon--tel"></use>
               </svg>
               <span class="sr-only">телефон +7907288365</span>
-              горячая линия 24/7
+              <span class="header-address__text">горячая линия 24/7</span>
             </a>
           </address>
 
@@ -51,6 +57,7 @@
         <div class="header__bottom-inner">
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="логотип ФрешОК">
+            <img class="logo__img--short" src="images/logo-short.svg" alt="логотип ФрешОК">
           </a>
 
           <div class="catalog">

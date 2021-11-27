@@ -3,6 +3,14 @@
   max-width: 240px;
   margin-right: 30px;
 
+  @include w992 {
+    margin-right: 5px;
+  }
+
+  @include w768 {
+    display: none;
+  }
+
   &__list {
     position: absolute;
     left: 0;
@@ -25,6 +33,11 @@
     position: relative;
     transition: background-color 0.3s, border-radius 1s;
 
+    @include w992 {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -39,6 +52,10 @@
       left: 18px;
       width: 25px;
       height: 17px;
+
+      @include w992 {
+        display: none;
+      }
     }
 
     &::after {
@@ -47,6 +64,12 @@
       width: 7px;
       height: 4px;
       transition: transform 0.3s;
+
+      @include w992 {
+        bottom: 8px;
+        right: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &:hover,
