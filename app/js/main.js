@@ -34,7 +34,7 @@ $(function(){
 		}
 	});
 
-  $('.user__btn').on('click',function(){
+  $('.user__btn--cart').on('click',function(){
     $('.basket').addClass('basket--active');
     $('body').addClass('overlay');
   });
@@ -75,7 +75,11 @@ $(function(){
     });
   });
 
+//мобильная версия поиска
 
+$('.user__btn--search').on('click',function(){
+  $('.header__form--mobile').toggleClass('header__form--active');
+});
 
 //mixitup (фильтр)
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

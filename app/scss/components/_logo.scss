@@ -19,7 +19,7 @@
       width: 140px;
     }
 
-    @include w768 {
+    @include w576 {
       display: none;
     }
   }
@@ -27,7 +27,7 @@
   &__img--short {
     display: none;
 
-    @include w768 {
+    @include w576 {
       display: block;
     }
   }

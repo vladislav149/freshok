@@ -136,8 +136,14 @@
             <button class="header__search-btn" type="submit">поиск</button>
           </form>
 
+          <form class="header__form header__form--mobile form" action="">
+            <label class="sr-only">поиск товаров</label>
+            <input class="header__search animation-input" name="search" placeholder="Я ищу..." type="search" required>
+            <button class="header__search-btn" type="submit">поиск</button>
+          </form>
+
           <ul class="user">
-            <li class="user__item animation-icon">
+            <li class="user__item user__item--nomobile animation-icon">
               <button class="user__btn user__btn--user" type="button">
                 <svg class="user__btn-img user__btn-img--user">
                   <use xlink:href="images/svg_sprite/sprite.svg#icon--user"></use>
@@ -145,7 +151,8 @@
                 <span class="sr-only">личный кабинет</span>
               </button>
             </li>
-            <li class="user__item animation-icon">
+
+            <li class="user__item user__item--nomobile animation-icon">
               <button class="user__btn user__btn--heart" type="button">
                 <span class="sr-only">избранные товары количество</span>
                 <svg class="user__btn-img user__btn-img--heart">
@@ -154,6 +161,16 @@
                 <span class="user__number">12</span>
               </button>
             </li>
+
+            <li class="user__item user__item--search animation-icon">
+              <button class="user__btn user__btn--search" type="button">
+                <span class="sr-only">поиск товара</span>
+                <svg class="user__btn-img user__btn-img--search">
+                  <use xlink:href="images/svg_sprite/sprite.svg#icon--search"></use>
+                </svg>
+              </button>
+            </li>
+
             <li class="user__item animation-icon">
               <button class="user__btn user__btn--cart" type="button">
                 <span class="sr-only">товаров в корзине</span>

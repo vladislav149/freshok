@@ -11,7 +11,7 @@
   transition: transform 0.5s;
 
   &--active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   &__top {

@@ -22,6 +22,11 @@
   &__bottom {
     background-color: $green-900;
     padding: 25px 0;
+    position: relative;
+
+    @include w768 {
+      padding: 6px 0;
+    }
   }
 
   &__bottom-inner {
@@ -50,6 +55,22 @@
       display: none;
     }
 
+
+    &--mobile {
+      display: flex;
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      max-width: 100%;
+      transform: scale(0);
+      transition: transform 0.4s;
+    }
+
+    &--active {
+      /* display: flex; */
+      transform: scale(1);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -67,17 +88,30 @@
       @include w992 {
         left: 0;
       }
+
+      @include w768 {
+        left: 3px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   &__search {
-    padding: 15px 10px 15px 30px;
+    padding: 15px 10px 15px 53px;
     border-radius: 6px 0 0 6px;
     background-color: $white;
     color: $dark-800;
     width: 100%;
 
-    @include w992 {}
+    @include w992 {
+      padding-left: 30px;
+    }
+
+    @include w768 {
+      padding-left: 46px;
+      border-radius: 0;
+    }
 
     &::placeholder {
       color: $dark-800;
@@ -100,6 +134,11 @@
 
     @include w992 {
       padding: 15px;
+    }
+
+    @include w768 {
+      padding: 15px 29px;
+      border-radius: 0;
     }
 
     &:focus {
