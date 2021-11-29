@@ -54,9 +54,12 @@
       background-color: $white;
       width: 48px;
       height: 48px;
-      /* не работает */
+      /*не работает 
+
+      filter: invert(53%) sepia(67%) saturate(1095%) hue-rotate(48deg) brightness(91%) contrast(89%);
       fill: $green-900;
-      /* не работает */
+
+      не работает */
       opacity: 0;
       border-radius: 50%;
       top: 50%;

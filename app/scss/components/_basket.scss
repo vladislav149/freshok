@@ -5,7 +5,7 @@
   max-width: 476px;
   width: 100%;
   z-index: 100;
-  bottom: 0;
+  min-height: 100vh;
   right: 0;
   top: 0;
   transition: transform 0.5s;
@@ -35,31 +35,6 @@
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.03em;
-  }
-
-  &__close {
-    position: relative;
-    width: 44px;
-    height: 44px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $dark-800;
-      height: 2px;
-      border-radius: 1px;
-      width: 34px;
-      left: 5px;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
   }
 
   &__list {
