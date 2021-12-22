@@ -1,4 +1,9 @@
 .card-product {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -20,6 +25,11 @@
     height: 29px;
     fill: $silver-600;
     transition: fill 0.4s;
+
+    @include w576 {
+      width: 25px;
+      height: 22px;
+    }
   }
 
   &__link {
@@ -75,7 +85,11 @@
   &__img {
     height: 215px;
     width: 300px;
-    object-fit: cover;
+    object-fit: contain;
+
+    @include w576 {
+      height: 128px;
+    }
   }
 
   &__bottom {
@@ -84,12 +98,24 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 17px 15px 17px;
+
+    @include w576 {
+      padding: 11px;
+      min-height: auto;
+      height: 100%;
+    }
   }
 
   &__name {
     font-family: 'OpenSans', sans-serif;
     font-weight: 600;
     font-size: 14px;
+
+    @include line-clamp (3);
+
+    @include w576 {
+      margin-bottom: auto;
+    }
   }
 
   &__bottom-box {
@@ -97,6 +123,7 @@
     justify-content: space-between;
     align-items: end;
     padding-left: 3px;
+    position: relative;
   }
 
   &__box {
@@ -125,6 +152,15 @@
         left: 0;
         bottom: 7px;
       }
+    }
+  }
+
+  &__quantify {
+
+    @include w576 {
+      position: absolute;
+      top: -36px;
+      left: 31px;
     }
   }
 

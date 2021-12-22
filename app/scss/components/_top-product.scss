@@ -2,12 +2,21 @@
   padding: 72px 0;
   letter-spacing: 0.03em;
 
+  @include w576 {
+    padding-top: 52px;
+    padding-bottom: 47px;
+  }
+
   &__inner {
     text-align: center;
   }
 
   &__title {
     margin-bottom: 17px;
+
+    @include w576 {
+      margin-bottom: 14px;
+    }
   }
 
   &__btn {

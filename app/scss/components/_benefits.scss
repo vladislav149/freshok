@@ -2,26 +2,77 @@
   background-color: $silver-100;
   padding: 50px 0 30px;
 
+  @include w576 {
+    padding-top: 30px;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-right: 75px;
+    padding-left: 17px;
+
+    @include w992 {
+      padding-left: 50px;
+    }
+
+    @include w576 {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 10px;
+    }
   }
 
   &__item {
     color: $dark-500;
-    display: flex;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100px;
-    padding-left: 97px;
+    max-width: 190px;
+    position: relative;
 
-    &:not(:last-child) {
-      margin-right: 43px;
+    @include w768 {
+      max-width: 145px;
     }
 
-    &--24-hours {
-      background-size: 90px;
+    @include w576 {
+      max-width: 210px;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 140px;
+
+      @include w992 {
+        margin-right: 60px;
+      }
+
+      @include w576 {
+        margin-right: 0;
+        margin-bottom: 31px;
+      }
+    }
+
+    &--scooter::before,
+    &--return-box::before,
+    &--24-hours::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      left: -73px;
+    }
+
+    &--scooter::before {
+      background-image: url(../images/svg_sprite/sprite.svg#benefits--scooter);
+    }
+
+    &--return-box::before {
+      background-image: url(../images/svg_sprite/sprite.svg#benefits--return-box);
+    }
+
+    &--24-hours::before {
+      background-image: url(../images/svg_sprite/sprite.svg#benefits--24-hours);
     }
   }
 
@@ -30,10 +81,6 @@
     width: 50px;
     height: 50px;
     margin-right: 24px;
-  }
-
-  &__box {
-    max-width: 190px;
   }
 
   &__title {
@@ -45,5 +92,7 @@
 
   &__text {
     font-weight: 400;
+
+    @include line-clamp(2);
   }
 }

@@ -1,11 +1,21 @@
 .news {
   padding: 72px 0;
 
+  @include w576 {
+    padding: 40px 0 48px;
+  }
+
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    @include w768 {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
@@ -43,11 +53,25 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include w768 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     max-width: 410px;
+    width: 100%;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
+
+    &--middle {
+      margin: 0 10px;
+
+      @include w768 {
+        margin: 15px 0;
+      }
+    }
   }
 }

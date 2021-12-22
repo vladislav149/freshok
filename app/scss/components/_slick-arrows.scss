@@ -1,6 +1,24 @@
 .slick-arrows {
+  background-color: rgba($white, 0.8);
+  padding: 5px 10px 0 10px;
+  border: none;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: background-color 0.3s,
     box-shadow 0.3s;
+
+  @include w1530 {
+    top: 70px;
+  }
+
+  @include w576 {
+    display: none;
+  }
 
   &:focus {
     outline: transparent;
@@ -11,5 +29,75 @@
   &:hover,
   &:active {
     background-color: $green-200;
+  }
+
+  &__arrows {
+    object-fit: contain;
+    width: 18px;
+    height: 32px;
+    fill: $dark-500;
+    transition: fill 0.3s;
+  }
+
+  &:focus .slick-arrows__arrows,
+  &:hover .slick-arrows__arrows,
+  &:active .slick-arrows__arrows {
+    fill: $green-900;
+  }
+
+  &__path {
+    transition: fill 0.3s;
+  }
+}
+
+.slick-prev {
+  left: 50px;
+}
+
+.slick-next {
+  right: 50px;
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+
+  button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    width: 22px;
+    height: 44px;
+
+    @include w576 {
+      display: flex;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background-color: $white;
+      border: 1px solid $silver-600;
+      border-radius: 50%;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+  }
+}
+
+.slick-active {
+  button {
+    &::after {
+      background-color: $green-900;
+      border-color: $green-900;
+    }
   }
 }

@@ -3,11 +3,21 @@ $(function(){
   
 //slick-slider (слайдер и кастомыне кнопки)  
   $('.hero__list').slick({
-    dots:false,
+    dots:true,
     prevArrow: '<button type="button" class="slick-prev slick-arrows"><svg class="slick-arrows__arrows"><use xlink:href="images/svg_sprite/sprite.svg#icon--arrow-left"></use></svg></button>',
 
     nextArrow: '<button type="button" class="slick-next slick-arrows"><svg class="slick-arrows__arrows"><use xlink:href="images/svg_sprite/sprite.svg#icon--arrow-right"></use></svg></button>'
   });
+  if (window.matchMedia("(max-width: 768px)").matches) {
+  /* the viewport is less than 768 pixels wide */
+    $('.brands-product__list').slick({
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 1500,
+    });
+  }
 
 
 //drop down menu (каталог продуктов)
@@ -25,7 +35,6 @@ $(function(){
   });
 
   $(document).mouseup(function (e){ // событие клика по веб-документу
-		var div = $('.catalog__items');   // тут указываем класс элемента
 		if (!$('.catalog__list').is(e.target) // если клик был не по этому блоку
 		    && $('.catalog__list').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.catalog__btn').is(e.target)) { // и если не по кнопке
@@ -41,12 +50,10 @@ $(function(){
   });
 
   $(document).mouseup(function (e){ // событие клика по веб-документу
-		var div = $('.basket');   // тут указываем класс элемента
 		if (!$('.basket').is(e.target) // если клик был не по этому блоку
 		    && $('.basket').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.close--basket').is(e.target)) { // и если не по кнопке//
       $('.basket').removeClass('basket--active'); //удаляю класс
-      $('body').removeClass('overlay'); //удаляю класс
 		}
 	});
 
@@ -58,20 +65,30 @@ $(function(){
 //кастомные кнопки для input[number]
 
   $(document).ready(function() {
-    $('.btn--minus').click(function () {
-      var $input = $(this).parent().find('input');
-      var count = parseInt($input.val()) - 1;
-      count = count < 1 ? 1 : count;
-      $input.val(count);
-      $input.change();
+    $('.btn--minus, .btn--plus').click(function () {
+      var input = $(this).parent().find('input');
+      if ($(this).hasClass('btn--minus')) {
+        var count = parseInt(input.val()) - 1;
+      } else if ($(this).hasClass('btn--plus')) {
+        var count = parseInt(input.val()) + 1;
+      } else {
+      return;
+      }
+      count = count < 1 ? 1 : count; 
+      count = count > 99 ? 99 : count;
+      input.val(count);
+      input.change();
       return false;
     });
-    $('.btn--plus').click(function () {
-      var $input = $(this).parent().find('input');
-      $input.val(parseInt($input.val()) + 1);
-      $input.change();
-      return false;
-    });
+  });
+
+  $('.quantify__count').bind('change paste keyup', function() {
+    if (parseInt($(this).val()) < 1) {
+      $(this).val(1);
+    }
+    if (parseInt($(this).val()) > 99) {
+      $(this).val(99);
+    }
   });
 
 //мобильная версия поиска
@@ -93,7 +110,6 @@ $('.user__btn--search').on('click',function(){
 		    && $('.menu-mobile').has(e.target).length === 0 // и не по его дочерним элементам
         && !$('.close--menu').is(e.target)) { // и если не по кнопке//
       $('.menu-mobile').removeClass('menu-mobile--active'); //удаляю класс
-      $('body').removeClass('overlay'); //удаляю класс
 		}
 	});
 
@@ -101,6 +117,19 @@ $('.user__btn--search').on('click',function(){
     $('.menu-mobile').removeClass('menu-mobile--active');
     $('body').removeClass('overlay');
   });
+
+//удаляем overlay
+
+  $(document).mouseup(function (e){
+		if (!$('.basket').is(e.target)
+		    && $('.basket').has(e.target).length === 0
+        && !$('.close--basket').is(e.target)
+        && !$('.menu-mobile').is(e.target)
+		    && $('.menu-mobile').has(e.target).length === 0
+        && !$('.close--menu').is(e.target)) {
+      $('body').removeClass('overlay');
+		}
+	});
 
 //mixitup (фильтр)
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

@@ -5,22 +5,47 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    height: 300px;
+
+    @include w768 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 300px;
     width: 100%;
+    min-height: 300px;
     padding-top: 76px;
     padding-left: 32px;
     border-radius: 6px;
 
+    @include w768 {
+      max-width: 630px;
+    }
+
+    @include w576 {
+      padding-left: 15px;
+      padding-bottom: 34px;
+    }
+
+
     &--big {
       max-width: 630px;
       color: $white;
+    }
+
+    &--middle {
+      margin: 0 5px;
+
+      @include w768 {
+        margin: 13px 0;
+      }
     }
   }
 
@@ -42,14 +67,27 @@
     line-height: 1.4;
     max-width: 160px;
 
+    @include w992 {
+      font-size: 24px;
+    }
+
+    @include w576 {
+      margin-bottom: auto;
+    }
+
     &--big {
       max-width: 365px;
+
+      @include w576 {
+        max-width: 260px;
+      }
     }
   }
 
   &__link {
     letter-spacing: 0.015em;
     position: relative;
+    width: fit-content;
 
     &::after {
       content: "";

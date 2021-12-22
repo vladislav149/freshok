@@ -13,9 +13,11 @@
   }
 
   &__title {
-    font: inherit;
+    font-weight: inherit;
+    font-size: inherit;
     margin-bottom: auto;
     letter-spacing: 0.03em;
+    @include line-clamp(3);
   }
 
   &__container {

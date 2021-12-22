@@ -1,5 +1,10 @@
 .social {
   display: flex;
+  position: relative;
+
+  @include w576 {
+    justify-content: center;
+  }
 
   &__item:not(:last-child) {
     margin-right: 12px;

@@ -47,6 +47,8 @@
     line-height: 1.3;
     margin-bottom: 10px;
 
+    @include line-clamp(3);
+
     @include w992 {
       font-size: 54px;
     }
@@ -73,6 +75,8 @@
     font-size: 16px;
     margin-bottom: 42px;
 
+    @include line-clamp(2);
+
     @include w576 {
       margin-bottom: 38px;
     }
@@ -82,52 +86,5 @@
     @include w576 {
       font-size: 14px;
     }
-  }
-
-  .slick-arrows {
-    background-color: rgba($white, 0.8);
-    padding: 5px 10px 0 10px;
-    border: none;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    z-index: 3;
-    border-radius: 6px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @include w1530 {
-      top: 70px;
-    }
-
-    @include w576 {
-      display: none;
-    }
-
-    &__arrows {
-      object-fit: contain;
-      width: 18px;
-      height: 32px;
-      fill: $dark-500;
-      transition: fill 0.3s;
-    }
-
-    &:focus .slick-arrows__arrows,
-    &:hover .slick-arrows__arrows,
-    &:active .slick-arrows__arrows {
-      fill: $green-900;
-    }
-
-    &__path {
-      transition: fill 0.3s;
-    }
-  }
-
-  .slick-prev {
-    left: 50px;
-  }
-
-  .slick-next {
-    right: 50px;
   }
 }
