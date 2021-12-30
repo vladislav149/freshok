@@ -17,7 +17,7 @@
   }
 
   @include w576 {
-    display: none;
+    display: none !important;
   }
 
   &:focus {
