@@ -1,0 +1,93 @@
+<section class="basket">
+  <div class="basket__top">
+    <div class="basket__top-box">
+      <h2 class="basket__title">
+        Корзина
+      </h2>
+      <button class="basket__clear" type="reset">
+        очистить корзину
+      </button>
+    </div>
+    <button class="close close--basket animation-icon animation-icon--close">
+      <span class="sr-only">закрыть корзину</span>
+    </button>
+  </div>
+  <ul class="basket__list">
+    <li class="basket__item">
+      <article class="basket-product">
+        <a class="basket-product__link" href="#">
+          <img class="basket-product__img" src="images/product/pineapple1.jpg" alt="ананас">
+          <div class="basket-product__box">
+            <h3 class="basket-product__name">
+              Ананас, 1 кг
+            </h3>
+            <span class="basket-product__price">999<span class="currency">₽</span></span>
+          </div>
+        </a>
+
+        <form class="basket-product__quantify quantify">
+          <label class="sr-only">выбор количества товаров</label>
+          <button class="btn btn--minus btn--quantify animation-btn" type="button">
+            <span class="sr-only">уменьшить количество товаров на 1</span>
+          </button>
+
+          <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+          <button class="btn btn--plus btn--quantify animation-btn" type="button">
+            <span class="sr-only">увеличить количество товаров на 1</span>
+          </button>
+        </form>
+
+        <span class="basket-product__sum">1998<span class="currency">₽</span></span>
+        <button class="basket-product__delete animation-icon animation-icon--close">
+          <span class="sr-only">удалить товар из корзины</span>
+        </button>
+      </article>
+    </li>
+
+    <li class="basket__item">
+      <article class="basket-product">
+        <a class="basket-product__link" href="#">
+          <img class="basket-product__img" src="images/product/dragon_fruit.jpg" alt="питахайя">
+          <div class="basket-product__box">
+            <h3 class="basket-product__name">
+              Питахайя красная с белой мякотью, 1шт
+            </h3>
+            <span class="basket-product__price">1019<span class="currency">₽</span></span>
+          </div>
+        </a>
+
+        <form class="basket-product__quantify quantify">
+          <label class="sr-only">выбор количества товаров</label>
+          <button class="btn btn--minus btn--quantify animation-btn" type="button">
+            <span class="sr-only">уменьшить количество товаров на 1</span>
+          </button>
+
+          <input class="quantify__count" name="quantify" type="number" min="1" value="1">
+
+          <button class="btn btn--plus btn--quantify animation-btn" type="button">
+            <span class="sr-only">увеличить количество товаров на 1</span>
+          </button>
+        </form>
+
+        <span class="basket-product__sum">2038<span class="currency">₽</span></span>
+        <button class="basket-product__delete animation-icon animation-icon--close">
+          <span class="sr-only">удалить товар из корзины</span>
+        </button>
+      </article>
+    </li>
+  </ul>
+
+  <div class="basket__total">
+    <span class="basket__text">
+      Товаров на сумму
+    </span>
+
+    <span class="basket__total-price">
+      2038<span class="currency basket__currency">₽</span>
+    </span>
+  </div>
+  <button class="basket__checkout btn animation-btn" type="submit">
+    Оформить заказ
+  </button>
+</section>

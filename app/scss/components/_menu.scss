@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+
+  @include w768 {
+    display: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    padding: 14px 0;
+  }
+}

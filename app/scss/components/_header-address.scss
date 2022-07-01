@@ -1,0 +1,47 @@
+.header-address {
+  display: flex;
+
+  &__adds {
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+
+      @include w992 {
+        margin-right: 15px;
+      }
+
+      @include w768 {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    margin-right: 12px;
+
+    &--address {
+      width: 32px;
+      height: 22px;
+    }
+
+    &--tel {
+      width: 22px;
+      height: 22px;
+      filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(234deg) brightness(100%) contrast(103%);
+
+      @include w768 {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__text {
+    @include w768 {
+      display: none;
+    }
+  }
+}

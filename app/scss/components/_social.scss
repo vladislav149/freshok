@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  position: relative;
+
+  @include w576 {
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(99%) sepia(97%) saturate(1%) hue-rotate(26deg) brightness(104%) contrast(100%);
+    width: 32px;
+    height: 39px;
+
+    &--mobile {
+      filter: invert(19%) sepia(5%) saturate(1398%) hue-rotate(42deg) brightness(92%) contrast(91%);
+    }
+  }
+}

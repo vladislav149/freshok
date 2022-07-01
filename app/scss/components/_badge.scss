@@ -1,0 +1,30 @@
+.badge {
+  display: block;
+  font-size: 10px;
+  line-height: 1.6;
+  color: $white;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 700;
+  background-color: $green-900;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 0 6px;
+  text-transform: uppercase;
+
+  &--red {
+    background-color: $red-900;
+  }
+
+  &--orange {
+    background-color: $orange-900;
+  }
+
+  &--mini-card {
+    position: absolute;
+    letter-spacing: 0.03em;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
